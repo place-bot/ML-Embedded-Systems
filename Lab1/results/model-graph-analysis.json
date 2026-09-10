@@ -1,0 +1,31 @@
+{
+  "mobilenet_v3_small": {
+    "operator_counts": {
+      "Conv": 52,
+      "HardSwish": 19,
+      "Relu": 14,
+      "GlobalAveragePool": 10,
+      "HardSigmoid": 9,
+      "Mul": 9,
+      "Add": 6,
+      "Flatten": 1,
+      "Gemm": 2
+    },
+    "grouped_convolutions": 11,
+    "convolution_macs_per_image": 54896576,
+    "note": "Static graph analysis, not runtime measurement. MAC count covers Conv nodes only."
+  },
+  "squeezenet1_1": {
+    "operator_counts": {
+      "Conv": 26,
+      "Relu": 26,
+      "MaxPool": 3,
+      "Concat": 8,
+      "GlobalAveragePool": 1,
+      "Flatten": 1
+    },
+    "grouped_convolutions": 0,
+    "convolution_macs_per_image": 349151936,
+    "note": "Static graph analysis, not runtime measurement. MAC count covers Conv nodes only."
+  }
+}

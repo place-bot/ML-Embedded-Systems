@@ -1,0 +1,9 @@
+Model: squeezenet1_1 | CPU threads: 1
+Scores are softmax outputs, not measured accuracy or calibrated confidence.
+
+Image: chelsea.png
+  1. Egyptian cat              71.40%
+  2. tiger cat                 13.56%
+  3. tabby                     13.45%
+  4. lynx                       1.47%
+  5. cheetah                    0.08%

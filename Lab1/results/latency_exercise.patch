@@ -1,0 +1,20 @@
+diff --git a/latency.py b/latency.py
+index 22edaf4..1a45de6 100644
+--- a/latency.py
++++ b/latency.py
+@@ -13,12 +13,11 @@ from time import perf_counter_ns
+ from common import MODEL_NAMES, ROOT, load_model, preprocess
+ 
+ 
+-# TODO: complete this function.
+ def time_inference(session, output_names, feed):
+-    # TIMER START: record the starting counter here.
++    start = perf_counter_ns()
+     session.run(output_names, feed)
+-    # TIMER END: record the ending counter, then return elapsed milliseconds.
+-    return None  # Replace this placeholder after adding the timer.
++    end = perf_counter_ns()
++    return (end - start) / 1_000_000
+ 
+ 
+ def main() -> None:

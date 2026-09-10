@@ -1,0 +1,100 @@
+{
+  "model": "mobilenet_v3_small",
+  "model_sha256": "16c4b905727201236ad7bd9fe1e776193a36ec05f818b08172fa487bea752cdc",
+  "threads": 1,
+  "images": [
+    {
+      "image": "chelsea.png",
+      "sha256": "596aa1e7cb875eb79f437e310381d26b338a81c2da23439704a73c4651e8c4bb",
+      "top5": [
+        {
+          "class_id": 282,
+          "label": "tiger cat",
+          "score": 0.4930877387523651
+        },
+        {
+          "class_id": 285,
+          "label": "Egyptian cat",
+          "score": 0.29658615589141846
+        },
+        {
+          "class_id": 281,
+          "label": "tabby",
+          "score": 0.20922879874706268
+        },
+        {
+          "class_id": 287,
+          "label": "lynx",
+          "score": 0.0009240885847248137
+        },
+        {
+          "class_id": 722,
+          "label": "ping-pong ball",
+          "score": 6.931232928764075e-05
+        }
+      ]
+    },
+    {
+      "image": "coffee.png",
+      "sha256": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7",
+      "top5": [
+        {
+          "class_id": 967,
+          "label": "espresso",
+          "score": 0.9639952778816223
+        },
+        {
+          "class_id": 925,
+          "label": "consomme",
+          "score": 0.015212025493383408
+        },
+        {
+          "class_id": 960,
+          "label": "chocolate sauce",
+          "score": 0.007791617419570684
+        },
+        {
+          "class_id": 968,
+          "label": "cup",
+          "score": 0.0052344826981425285
+        },
+        {
+          "class_id": 809,
+          "label": "soup bowl",
+          "score": 0.0037856658454984426
+        }
+      ]
+    },
+    {
+      "image": "rocket.jpg",
+      "sha256": "c2dd0de7c538df8d111e479619b129464d0269d0ae5fd18ca91d33a7fdfea95c",
+      "top5": [
+        {
+          "class_id": 657,
+          "label": "missile",
+          "score": 0.2236064076423645
+        },
+        {
+          "class_id": 668,
+          "label": "mosque",
+          "score": 0.13474541902542114
+        },
+        {
+          "class_id": 733,
+          "label": "pole",
+          "score": 0.09815285354852676
+        },
+        {
+          "class_id": 744,
+          "label": "projectile",
+          "score": 0.08502380549907684
+        },
+        {
+          "class_id": 517,
+          "label": "crane",
+          "score": 0.07558052986860275
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setmonofont{Consolas}[Scale=0.88]
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcommand{\topic}[1]{\par\smallskip\textbf{#1}\par\nopagebreak}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Lab 1 Report}\\[5pt]
+CSE 60685 Machine Learning for Embedded Systems\\[3pt]
+Image Classification and Inference Latency on Raspberry Pi
+\end{center}
+
+On the supplied Raspberry Pi 4 Model B Rev.\ 1.5 running 64-bit Raspberry Pi OS (Debian 13 trixie, release 13.5) and Python 3.13.5, I measured \texttt{samples/chelsea.png} with one CPU thread, 10 untimed warm-ups and 100 timed calls per phase, using the unchanged \texttt{benchmark.py}.
+
+ONNX Runtime 1.23.2 used \texttt{CPUExecutionProvider} with FP32, batch-one inputs. Runs were sequential with the same CanaKit power supply, open case lid, running fan and \texttt{ondemand} CPU governor. The two required runs began at 43.8--45.3\,$^{\circ}$C before warm-up; sampled temperatures across all runs stayed at or below 51.1\,$^{\circ}$C, with all recorded power/throttling flags equal to \texttt{0x0}.
+
+\topic{Inference latency results}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Model & ONNX file size (MiB) & Median inference latency (ms)\\
+\midrule
+MobileNetV3-Small & 9.71 & 39.351\\
+SqueezeNet 1.1 & 4.73 & 90.091\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\topic{1. Which model is faster, and does file size predict latency?}
+MobileNetV3-Small was 2.29 times faster, although its model file is larger. SqueezeNet's smaller file therefore did not imply lower latency. Parameter count and file size describe stored weights; runtime also depends on feature-map sizes, arithmetic, memory traffic and CPU kernel efficiency. Static inspection of the supplied ONNX graphs gives approximately 54.9 million convolution MACs for MobileNet versus 349.2 million for SqueezeNet (Conv nodes only). MobileNet includes 11 grouped/depthwise convolutions, while SqueezeNet uses dense convolutions and concatenations. These differences help explain why weight size alone is insufficient; aggregate timings do not isolate each operation's contribution.
+
+\topic{2. Timer placement and measurement boundary}
+In \texttt{time\_inference} in \texttt{latency.py}, I placed the counters immediately around the model call:
+\begin{quote}\small\ttfamily
+start = perf\_counter\_ns()\\
+session.run(output\_names, feed)\\
+end = perf\_counter\_ns()\\
+return (end - start) / 1\_000\_000
+\end{quote}
+The result is in milliseconds and includes the synchronous CPU model call and Python call overhead. Model/session loading, image decoding and preprocessing occur outside the timer because the goal is repeated inference on a prepared tensor, rather than startup or the entire pipeline. Softmax, printing and file output are also excluded.
+
+\topic{Optional exploration and validation}
+With four threads, inference medians were 21.702\,ms (MobileNet) and 42.988\,ms (SqueezeNet), giving one-to-four-thread speedups of 1.81$\times$ and 2.10$\times$. The environment check passed for both models. MobileNet printed five Chelsea predictions; the top result was tiger cat (49.31\%). The timer exercise completed 10 warm-ups and 100 timed calls. The camera was listed as \texttt{ov5647}; \texttt{camera\_check.py} reported PASS for a readable $640\times480$ JPEG, which was also classified. Each benchmark CSV retains all 200 measurements: 100 inference-only and 100 image-to-result calls. Code, JSON/CSV results and the camera image are preserved.
+
+\vfill
+{\small Source: \href{https://github.com/guoyb17/CSE60685-FA26-Lab-1/tree/5bb37f5c8718881a9728e3cc7567a560b4119920}{course repository, commit \texttt{5bb37f5}}. Reported latencies are \texttt{inference.median\_ms} from actual Pi runs.}
+\end{document}

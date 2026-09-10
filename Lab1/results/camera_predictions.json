@@ -1,0 +1,38 @@
+{
+  "model": "mobilenet_v3_small",
+  "model_sha256": "16c4b905727201236ad7bd9fe1e776193a36ec05f818b08172fa487bea752cdc",
+  "threads": 1,
+  "images": [
+    {
+      "image": "camera_check.jpg",
+      "sha256": "438556cc592e2345bb9a2e71181a7073218b3711d70bbba969d95888558049fa",
+      "top5": [
+        {
+          "class_id": 619,
+          "label": "lampshade",
+          "score": 0.7666319012641907
+        },
+        {
+          "class_id": 846,
+          "label": "table lamp",
+          "score": 0.07947824895381927
+        },
+        {
+          "class_id": 601,
+          "label": "hoopskirt",
+          "score": 0.025848573073744774
+        },
+        {
+          "class_id": 578,
+          "label": "gown",
+          "score": 0.021623050794005394
+        },
+        {
+          "class_id": 794,
+          "label": "shower curtain",
+          "score": 0.017185065895318985
+        }
+      ]
+    }
+  ]
+}

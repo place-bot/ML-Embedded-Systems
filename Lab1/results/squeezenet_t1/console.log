@@ -1,0 +1,6 @@
+squeezenet1_1, 1 thread(s), 10 warm-ups per phase, 100 timed runs per phase
+Model file: 4.73 MiB
+   inference: median 90.091 ms, p95 90.279 ms
+  end_to_end: median 109.182 ms, p95 109.575 ms
+Saved results/squeezenet_t1/summary.json and raw_timings.csv
+[0;93m2026-09-09 21:45:04.418712791 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"[m

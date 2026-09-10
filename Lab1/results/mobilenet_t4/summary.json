@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-09-10T01:46:52.531238+00:00",
+  "finished_utc": "2026-09-10T01:46:59.424294+00:00",
+  "model": "mobilenet_v3_small",
+  "model_sha256": "16c4b905727201236ad7bd9fe1e776193a36ec05f818b08172fa487bea752cdc",
+  "model_bytes": 10181043,
+  "model_mib": 9.709399223327637,
+  "parameter_count": 2542856,
+  "image": "chelsea.png",
+  "image_sha256": "596aa1e7cb875eb79f437e310381d26b338a81c2da23439704a73c4651e8c4bb",
+  "batch_size": 1,
+  "precision": "float32",
+  "threads": 4,
+  "warmup_per_phase": 10,
+  "runs_per_phase": 100,
+  "session": {
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "execution_mode": "ORT_SEQUENTIAL",
+    "inter_op_threads": 1,
+    "intra_op_threads": 4,
+    "graph_optimization": "ORT_ENABLE_ALL",
+    "allow_spinning": false
+  },
+  "timing_scope": {
+    "clock": "time.perf_counter_ns",
+    "inference": "Synchronous session.run with preloaded float32 tensor; includes Python call overhead.",
+    "end_to_end": "Open/decode image, EXIF/RGB, resize/crop/normalize, session.run, softmax and top5.",
+    "excluded_from_both": "Model/session initialization, warm-ups, printing, result files, telemetry, hashing.",
+    "cache_note": "Repeated same image: file bytes may be in OS cache; not a cold-storage benchmark.",
+    "phase_order": [
+      "inference",
+      "end_to_end"
+    ],
+    "p95_method": "NumPy percentile 95, linear interpolation"
+  },
+  "inference": {
+    "count": 100,
+    "median_ms": 21.702186500000003,
+    "p95_ms": 21.8200764,
+    "mean_ms": 21.737333579999994,
+    "min_ms": 21.489255,
+    "max_ms": 25.969606
+  },
+  "end_to_end": {
+    "count": 100,
+    "median_ms": 40.8131205,
+    "p95_ms": 40.9416881,
+    "mean_ms": 40.80629084,
+    "min_ms": 40.573214,
+    "max_ms": 41.067671
+  },
+  "top5": [
+    {
+      "class_id": 282,
+      "label": "tiger cat",
+      "score": 0.493088036775589
+    },
+    {
+      "class_id": 285,
+      "label": "Egyptian cat",
+      "score": 0.2965860366821289
+    },
+    {
+      "class_id": 281,
+      "label": "tabby",
+      "score": 0.20922870934009552
+    },
+    {
+      "class_id": 287,
+      "label": "lynx",
+      "score": 0.0009240909130312502
+    },
+    {
+      "class_id": 722,
+      "label": "ping-pong ball",
+      "score": 6.931236566742882e-05
+    }
+  ],
+  "environment": {
+    "platform": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "python": "3.13.5",
+    "python_bits": 64,
+    "logical_cpus": 4,
+    "board_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.5\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"",
+    "cpu0_governor": "ondemand",
+    "packages": {
+      "numpy": "2.2.6",
+      "Pillow": "12.3.0",
+      "onnxruntime": "1.23.2"
+    },
+    "available_providers": [
+      "AzureExecutionProvider",
+      "CPUExecutionProvider"
+    ]
+  },
+  "device_state": {
+    "before_warmup": {
+      "temperature_c": 45.277,
+      "cpu0_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    },
+    "after_inference": {
+      "temperature_c": 49.66,
+      "cpu0_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    },
+    "after_end_to_end": {
+      "temperature_c": 50.634,
+      "cpu0_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    }
+  }
+}

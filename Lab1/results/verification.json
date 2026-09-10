@@ -1,0 +1,34 @@
+{
+  "report_pages": 1,
+  "source_benchmark_unchanged": true,
+  "same_image_all_runs": true,
+  "same_environment_all_runs": true,
+  "checks": [
+    {
+      "run": "mobilenet_t1",
+      "csv_rows": 200,
+      "median_recomputed": true,
+      "unthrottled": true
+    },
+    {
+      "run": "mobilenet_t4",
+      "csv_rows": 200,
+      "median_recomputed": true,
+      "unthrottled": true
+    },
+    {
+      "run": "squeezenet_t1",
+      "csv_rows": 200,
+      "median_recomputed": true,
+      "unthrottled": true
+    },
+    {
+      "run": "squeezenet_t4",
+      "csv_rows": 200,
+      "median_recomputed": true,
+      "unthrottled": true
+    }
+  ],
+  "camera_check": "PASS 640x480",
+  "environment_check": "PASS both models"
+}

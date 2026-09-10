@@ -1,0 +1,50 @@
+{
+  "cooling": "Case lid open; fan running, confirmed by user; kept unchanged.",
+  "power": "Supplied CanaKit USB-C adapter; unchanged during comparisons.",
+  "benchmark_sha256": "a5968bcb910edc48d4c0d56fff8e7ff74d984cb10e66f4abe1752863496175ba",
+  "repo_commit": "5bb37f5c8718881a9728e3cc7567a560b4119920",
+  "execution": "Sequential, actual supplied Raspberry Pi. No simultaneous benchmark processes.",
+  "cool_before_each_run_to_c": 43.5,
+  "runs": [
+    {
+      "directory": "results/mobilenet_t1",
+      "pre_launch_state": {
+        "temperature_c": 43.329,
+        "cpu0_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "inference_median_ms": 39.350846000000004,
+      "csv_measurements": 200
+    },
+    {
+      "directory": "results/squeezenet_t1",
+      "pre_launch_state": {
+        "temperature_c": 43.329,
+        "cpu0_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "inference_median_ms": 90.0914535,
+      "csv_measurements": 200
+    },
+    {
+      "directory": "results/mobilenet_t4",
+      "pre_launch_state": {
+        "temperature_c": 43.329,
+        "cpu0_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "inference_median_ms": 21.702186500000003,
+      "csv_measurements": 200
+    },
+    {
+      "directory": "results/squeezenet_t4",
+      "pre_launch_state": {
+        "temperature_c": 43.329,
+        "cpu0_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "inference_median_ms": 42.988196,
+      "csv_measurements": 200
+    }
+  ]
+}

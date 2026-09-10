@@ -1,0 +1,35 @@
+{
+  "source_release": "scikit-image v0.25.2",
+  "provenance": "https://github.com/scikit-image/scikit-image/blob/v0.25.2/skimage/data/_fetchers.py",
+  "checksum_source": "https://github.com/scikit-image/scikit-image/blob/v0.25.2/skimage/data/_registry.py",
+  "purpose": "Three illustrative photographs, not an accuracy evaluation dataset.",
+  "images": [
+    {
+      "file": "chelsea.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/chelsea.png",
+      "sha256": "596aa1e7cb875eb79f437e310381d26b338a81c2da23439704a73c4651e8c4bb",
+      "subject": "Chelsea the cat",
+      "creator": "Stefan van der Walt",
+      "license": "CC0 1.0, as documented by scikit-image",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "coffee.png",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/coffee.png",
+      "sha256": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7",
+      "subject": "Coffee cup, courtesy of Pikolo Espresso Bar",
+      "creator": "Rachel Michetti",
+      "license": "CC0 1.0, as documented by scikit-image",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "rocket.jpg",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/rocket.jpg",
+      "sha256": "c2dd0de7c538df8d111e479619b129464d0269d0ae5fd18ca91d33a7fdfea95c",
+      "subject": "Falcon 9 carrying DSCOVR at launch",
+      "creator": "SpaceX",
+      "license": "Public domain, as documented by scikit-image",
+      "original_url": "https://www.flickr.com/photos/spacexphotos/16511594820/in/photostream/"
+    }
+  ]
+}

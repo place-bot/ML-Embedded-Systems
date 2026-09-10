@@ -1,0 +1,2 @@
+# Preserve the exact bytes of the exported Pi evidence and source files.
+* -text

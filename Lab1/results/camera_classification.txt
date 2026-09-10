@@ -1,0 +1,11 @@
+Model: mobilenet_v3_small | CPU threads: 1
+Scores are softmax outputs, not measured accuracy or calibrated confidence.
+
+Image: camera_check.jpg
+  1. lampshade                 76.66%
+  2. table lamp                 7.95%
+  3. hoopskirt                  2.58%
+  4. gown                       2.16%
+  5. shower curtain             1.72%
+
+Saved results/camera_predictions.json

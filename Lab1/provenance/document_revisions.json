@@ -1,0 +1,10 @@
+{
+  "results/Lab1_Report.pdf": {
+    "original_sha256": "e464e67c72dce65d11dc46d8a1c0520c474fb07dbcd50a5b4f1d8d46ca432b7e",
+    "final_sha256": "be6991034baa8a5eb15de5d85458f6d74fac9f918faaa80375401b6c090d428f"
+  },
+  "results/report.md": {
+    "original_sha256": "b23cb2edd2ad5b089d62502f6ee7ed4584add02c86eb2f7c38e667729bb28c5f",
+    "final_sha256": "4b19e978b971d4cadacbfb1d5f0a4cd79501816b804f56af3cebe3062942b67e"
+  }
+}

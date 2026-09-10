@@ -1,0 +1,33 @@
+Available cameras
+-----------------
+0 : ov5647 [2592x1944 10-bit GBRG] (/base/soc/i2c0mux/i2c@1/ov5647@36)
+    Modes: 'SGBRG10_CSI2P' : 640x480 [62.50 fps - (16, 0)/2560x1920 crop]
+                             1296x972 [46.34 fps - (0, 0)/2592x1944 crop]
+                             1920x1080 [32.81 fps - (348, 434)/1928x1080 crop]
+                             2592x1944 [15.63 fps - (0, 0)/2592x1944 crop]
+
+[0:38:05.564482390] [4157]  INFO Camera camera_manager.cpp:340 libcamera v0.7.1+rpt20260609
+[0:38:05.582628225] [4160]  INFO RPI pipeline_base.cpp:1133 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[0:38:05.610356642] [4160]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/ov5647.json
+[0:38:05.616952452] [4160]  INFO Camera camera_manager.cpp:223 Adding camera '/base/soc/i2c0mux/i2c@1/ov5647@36' for pipeline handler rpi/vc4
+[0:38:05.617007377] [4160]  INFO RPI vc4.cpp:445 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media2
+Mode selection for 1296:972:12:P
+    SGBRG10_CSI2P,640x480/0 - Score: 3296
+    SGBRG10_CSI2P,1296x972/0 - Score: 1000
+    SGBRG10_CSI2P,1920x1080/0 - Score: 1349.67
+    SGBRG10_CSI2P,2592x1944/0 - Score: 1567
+Stream configuration adjusted
+[0:38:05.654017920] [4157]  INFO Camera camera.cpp:1216 configuring streams: (0) 1296x972-YUV420/sYCC (1) 1296x972-SGBRG10_CSI2P/RAW
+[0:38:05.654389172] [4160]  INFO RPI vc4.cpp:620 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 1296x972-SGBRG10_1X10/RAW - Selected unicam format: 1296x972-pGAA/RAW
+Mode selection for 640:480:12:P
+    SGBRG10_CSI2P,640x480/0 - Score: 1000
+    SGBRG10_CSI2P,1296x972/0 - Score: 1287
+    SGBRG10_CSI2P,1920x1080/0 - Score: 1636.67
+    SGBRG10_CSI2P,2592x1944/0 - Score: 1854
+Stream configuration adjusted
+[0:38:07.702239249] [4157]  INFO Camera camera.cpp:1216 configuring streams: (0) 640x480-YUV420/sYCC (1) 640x480-SGBRG10_CSI2P/RAW
+[0:38:07.702727202] [4160]  INFO RPI vc4.cpp:620 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 640x480-SGBRG10_1X10/RAW - Selected unicam format: 640x480-pGAA/RAW
+Still capture image received
+PASS: captured a valid 640 x 480 JPEG: results/camera_check.jpg
+Inspect the photograph for exposure and focus when a display is available.
+Optional classification: python classify.py --image "results/camera_check.jpg"

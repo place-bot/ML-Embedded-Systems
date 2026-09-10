@@ -1,0 +1,8 @@
+PASS: all 39 final evidence/source/report hashes match on the Raspberry Pi.
+Final LaTeX report SHA-256: be6991034baa8a5eb15de5d85458f6d74fac9f918faaa80375401b6c090d428f
+Unchanged benchmark SHA-256: a5968bcb910edc48d4c0d56fff8e7ff74d984cb10e66f4abe1752863496175ba
+mobilenet_t1 inference median: 39.350846000000004 ms
+squeezenet_t1 inference median: 90.0914535 ms
+mobilenet_t4 inference median: 21.702186500000003 ms
+squeezenet_t4 inference median: 42.988196 ms
+Final code, data, camera image, LaTeX source and PDF saved on the Pi.

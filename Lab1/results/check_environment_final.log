@@ -1,0 +1,28 @@
+{
+  "environment": {
+    "platform": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "python": "3.13.5",
+    "python_bits": 64,
+    "logical_cpus": 4,
+    "board_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.5\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"",
+    "cpu0_governor": "ondemand",
+    "packages": {
+      "numpy": "2.2.6",
+      "Pillow": "12.3.0",
+      "onnxruntime": "1.23.2"
+    },
+    "available_providers": [
+      "AzureExecutionProvider",
+      "CPUExecutionProvider"
+    ]
+  },
+  "device_state": {
+    "temperature_c": 47.712,
+    "cpu0_frequency_khz": 1800000,
+    "throttled_hex": "0x0"
+  }
+}
+PASS mobilenet_v3_small: 1000 output classes; top result = tiger cat
+PASS squeezenet1_1: 1000 output classes; top result = Egyptian cat

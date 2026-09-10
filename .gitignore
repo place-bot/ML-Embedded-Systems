@@ -1,0 +1,9 @@
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.aux
+*.out
+*.toc
+*.synctex.gz
+Lab1/report/*.log

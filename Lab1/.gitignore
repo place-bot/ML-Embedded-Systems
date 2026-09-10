@@ -1,0 +1,15 @@
+env/
+__pycache__/
+*.py[cod]
+results/
+models-regenerated/
+.cache/
+*.zip
+
+tests/
+third_party/
+tools/
+validation/
+requirements-export.txt
+INSTRUCTOR.md
+NOTICE.md

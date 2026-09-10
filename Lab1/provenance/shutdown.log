@@ -1,0 +1,6 @@
+2026-09-10T02:05:00+00:00
+All lab files have been saved. Requesting Raspberry Pi operating-system shutdown.
+Command: sudo poweroff
+sudo poweroff returned successfully.
+SSH runner exit status: 0. SSH connection closed by the Raspberry Pi after the successful poweroff command.
+User confirmed after the command: green activity LED stopped flashing. Operating-system shutdown and physical activity check completed.

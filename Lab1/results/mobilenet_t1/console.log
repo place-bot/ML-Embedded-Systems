@@ -1,0 +1,6 @@
+mobilenet_v3_small, 1 thread(s), 10 warm-ups per phase, 100 timed runs per phase
+Model file: 9.71 MiB
+   inference: median 39.351 ms, p95 39.487 ms
+  end_to_end: median 58.087 ms, p95 58.464 ms
+Saved results/mobilenet_t1/summary.json and raw_timings.csv
+[0;93m2026-09-09 21:43:26.988378003 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"[m
