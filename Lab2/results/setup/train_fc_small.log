@@ -1,0 +1,7 @@
+fc_small: 20,984 parameters, 5 epochs, CPU / one thread
+Epoch 1/5: loss=1.1932, validation=70.00%, train=13.57 s
+Epoch 2/5: loss=0.7104, validation=74.15%, train=13.54 s
+Epoch 3/5: loss=0.6309, validation=76.50%, train=13.55 s
+Epoch 4/5: loss=0.5869, validation=76.85%, train=13.58 s
+Epoch 5/5: loss=0.5446, validation=79.20%, train=13.54 s
+Saved /home/jingyi/CSE60685-FA26-Lab-2/results/fc_small/checkpoint.pt. Next run evaluate.py in a new process after all three architectures are fixed.

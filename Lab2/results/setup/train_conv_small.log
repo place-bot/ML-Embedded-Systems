@@ -1,0 +1,7 @@
+conv_small: 27,180 parameters, 5 epochs, CPU / one thread
+Epoch 1/5: loss=1.1562, validation=69.75%, train=10.23 s
+Epoch 2/5: loss=0.7162, validation=73.85%, train=10.15 s
+Epoch 3/5: loss=0.6471, validation=76.00%, train=10.16 s
+Epoch 4/5: loss=0.6096, validation=77.10%, train=10.15 s
+Epoch 5/5: loss=0.5676, validation=78.00%, train=10.14 s
+Saved /home/jingyi/CSE60685-FA26-Lab-2/results/conv_small/checkpoint.pt. Next run evaluate.py in a new process after all three architectures are fixed.

@@ -1,0 +1,3 @@
+input: [2, 1, 28, 28]; features: [2, 16, 4, 4]
+flattened: [2, 256]; logits: [2, 10]
+PASS: 44,426 parameters; architecture {'c1': 6, 'c2': 16, 'h1': 120, 'h2': 84}

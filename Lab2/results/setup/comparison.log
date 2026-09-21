@@ -1,0 +1,3 @@
+baseline      44426 parameters; 79.72%; 13.86 s/epoch; 2.6603 ms
+conv_small    27180 parameters; 78.05%; 10.17 s/epoch; 2.3970 ms
+fc_small      20984 parameters; 78.84%; 13.56 s/epoch; 2.4440 ms

@@ -1,0 +1,7 @@
+baseline: 44,426 parameters, 5 epochs, CPU / one thread
+Epoch 1/5: loss=1.1053, validation=71.40%, train=13.88 s
+Epoch 2/5: loss=0.6719, validation=75.00%, train=13.87 s
+Epoch 3/5: loss=0.6057, validation=78.05%, train=13.83 s
+Epoch 4/5: loss=0.5607, validation=78.65%, train=13.85 s
+Epoch 5/5: loss=0.5184, validation=79.65%, train=13.87 s
+Saved /home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt. Next run evaluate.py in a new process after all three architectures are fixed.

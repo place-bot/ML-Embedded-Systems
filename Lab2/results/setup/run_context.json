@@ -1,0 +1,297 @@
+{
+  "device": "Supplied Raspberry Pi 4B; all required training, evaluation and timings run on its CPU.",
+  "power": "Supplied CanaKit USB-C adapter.",
+  "cooling": "Case lid closed; fan running, confirmed by student on 2026-09-21; held unchanged.",
+  "governor": "ondemand",
+  "execution": "Sequential; unchanged instructor train.py, evaluate.py, benchmark.py, summarize.py.",
+  "pre_launch_temperature_limit_c": 40.0,
+  "stages": [
+    {
+      "label": "train_baseline",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "train.py",
+        "--model",
+        "baseline",
+        "--output",
+        "results/baseline"
+      ],
+      "started_utc": "2026-09-21T22:12:28.483363+00:00",
+      "before": {
+        "temperature_c": 38.946,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:13:50.192310+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 46.251,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "baseline_reload",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "evaluate.py",
+        "--checkpoint",
+        "results/baseline/checkpoint.pt",
+        "--verify-only",
+        "--output",
+        "results/baseline/reload_check"
+      ],
+      "started_utc": "2026-09-21T22:13:50.197423+00:00",
+      "before": {
+        "temperature_c": 46.251,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:13:58.990951+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 46.738,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "train_conv_small",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "train.py",
+        "--model",
+        "conv_small",
+        "--output",
+        "results/conv_small"
+      ],
+      "started_utc": "2026-09-21T22:14:44.011856+00:00",
+      "before": {
+        "temperature_c": 39.433,
+        "cpu_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:15:46.704312+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 47.225,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "train_fc_small",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "train.py",
+        "--model",
+        "fc_small",
+        "--output",
+        "results/fc_small"
+      ],
+      "started_utc": "2026-09-21T22:16:46.730111+00:00",
+      "before": {
+        "temperature_c": 38.946,
+        "cpu_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:18:06.828740+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 47.225,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "evaluate_baseline",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "evaluate.py",
+        "--checkpoint",
+        "results/baseline/checkpoint.pt",
+        "--output",
+        "results/baseline/evaluation"
+      ],
+      "started_utc": "2026-09-21T22:18:06.839046+00:00",
+      "before": {
+        "temperature_c": 47.712,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:18:20.144656+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 48.199,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "evaluate_conv_small",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "evaluate.py",
+        "--checkpoint",
+        "results/conv_small/checkpoint.pt",
+        "--output",
+        "results/conv_small/evaluation"
+      ],
+      "started_utc": "2026-09-21T22:18:20.149831+00:00",
+      "before": {
+        "temperature_c": 48.199,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:18:32.969561+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 48.199,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "evaluate_fc_small",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "evaluate.py",
+        "--checkpoint",
+        "results/fc_small/checkpoint.pt",
+        "--output",
+        "results/fc_small/evaluation"
+      ],
+      "started_utc": "2026-09-21T22:18:32.977543+00:00",
+      "before": {
+        "temperature_c": 48.199,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:18:46.281786+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 48.686,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "benchmark_baseline",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "benchmark.py",
+        "--checkpoint",
+        "results/baseline/checkpoint.pt",
+        "--threads",
+        "1",
+        "--warmup",
+        "10",
+        "--runs",
+        "100",
+        "--output",
+        "results/baseline/benchmark"
+      ],
+      "started_utc": "2026-09-21T22:20:16.317980+00:00",
+      "before": {
+        "temperature_c": 39.92,
+        "cpu_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:20:24.600250+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 44.303,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "benchmark_conv_small",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "benchmark.py",
+        "--checkpoint",
+        "results/conv_small/checkpoint.pt",
+        "--threads",
+        "1",
+        "--warmup",
+        "10",
+        "--runs",
+        "100",
+        "--output",
+        "results/conv_small/benchmark"
+      ],
+      "started_utc": "2026-09-21T22:21:09.621133+00:00",
+      "before": {
+        "temperature_c": 39.92,
+        "cpu_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:21:18.348000+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 43.816,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "benchmark_fc_small",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "benchmark.py",
+        "--checkpoint",
+        "results/fc_small/checkpoint.pt",
+        "--threads",
+        "1",
+        "--warmup",
+        "10",
+        "--runs",
+        "100",
+        "--output",
+        "results/fc_small/benchmark"
+      ],
+      "started_utc": "2026-09-21T22:22:33.379547+00:00",
+      "before": {
+        "temperature_c": 39.92,
+        "cpu_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:22:41.693154+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 43.329,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "comparison",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-2/env/bin/python",
+        "summarize.py",
+        "--runs",
+        "results/baseline",
+        "results/conv_small",
+        "results/fc_small",
+        "--output",
+        "results/comparison"
+      ],
+      "started_utc": "2026-09-21T22:22:41.698267+00:00",
+      "before": {
+        "temperature_c": 43.329,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-21T22:22:49.072853+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 42.842,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    }
+  ],
+  "all_training_completed_utc": "2026-09-21T22:18:06.831735+00:00",
+  "required_experiments_completed_utc": "2026-09-21T22:22:49.075923+00:00"
+}

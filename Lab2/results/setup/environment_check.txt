@@ -1,0 +1,7 @@
+Python 3.13.5; machine aarch64
+torch: 2.8.0
+torchvision: 0.23.0
+numpy: 2.2.6
+Pillow: 12.3.0
+PASS: a CPU forward and backward pass completed; course assets are readable.
+Next: python prepare_data.py, then complete the Tutorial exercises.

@@ -1,0 +1,87 @@
+{
+  "model_name": "conv_small",
+  "architecture": {
+    "c1": 3,
+    "c2": 8,
+    "h1": 120,
+    "h2": 84
+  },
+  "parameter_count": 27180,
+  "checkpoint_sha256": "2a90692fcab51c41d977d72d5e5480ffbb0e8f85c4845b3ca54e3319857c78e5",
+  "split_sha256": "76639088a470fa016cf664fd363011d614d972605c8c43cbebd70bbc3594f443",
+  "data_manifest_sha256": "a9cb65a41582fb1cdada23270175136f0161505616147f1dac9e013297507d51",
+  "course_config": {
+    "schema_version": 1,
+    "dataset": "Fashion-MNIST",
+    "train_size": 12000,
+    "validation_size": 2000,
+    "test_size": 10000,
+    "epochs": 5,
+    "batch_size": 64,
+    "evaluation_batch_size": 256,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "seed": 42,
+    "threads": 1,
+    "interop_threads": 1,
+    "num_workers": 0,
+    "warmup": 10,
+    "runs": 100,
+    "input_shape": [
+      1,
+      1,
+      28,
+      28
+    ],
+    "dtype": "float32",
+    "preprocessing": "28x28 grayscale uint8 divided by 255; no resize or additional normalization"
+  },
+  "schema_version": 1,
+  "runtime": "PyTorch eager CPU",
+  "threads": 1,
+  "warmup": 10,
+  "runs": 100,
+  "input_shape": [
+    1,
+    1,
+    28,
+    28
+  ],
+  "input_dtype": "float32",
+  "input_index": 12532,
+  "input_label": 0,
+  "input_sha256": "684d923195976f9ba3c9735c8253a7035aef4e23f9c9773334ef8ad22ddcd89f",
+  "inference": {
+    "sample_count": 100,
+    "median_ms": 2.3970385,
+    "p95_ms": 2.47357535,
+    "mean_ms": 2.4013739800000007,
+    "min_ms": 2.320909,
+    "max_ms": 2.667873
+  },
+  "environment": {
+    "timestamp_utc": "2026-09-21T22:21:16.998504+00:00",
+    "python": "3.13.5",
+    "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.2.6",
+    "threads": 1,
+    "interop_threads": 1,
+    "execution_device": "cpu"
+  },
+  "telemetry": {
+    "before": {
+      "temperature_c": 43.816,
+      "cpu_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    },
+    "after": {
+      "temperature_c": 44.79,
+      "cpu_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    }
+  },
+  "timing_scope": "Synchronous CPU model(x), including Python call overhead; excludes loading, preprocessing, argmax/softmax, printing, checksums and output files."
+}

@@ -1,0 +1,24 @@
+{
+  "fixed_before_training_and_test_utc": "2026-09-21T22:09:12.623985+00:00",
+  "architectures": {
+    "baseline": {
+      "c1": 6,
+      "c2": 16,
+      "h1": 120,
+      "h2": 84
+    },
+    "conv_small": {
+      "c1": 3,
+      "c2": 8,
+      "h1": 120,
+      "h2": 84
+    },
+    "fc_small": {
+      "c1": 6,
+      "c2": 16,
+      "h1": 60,
+      "h2": 42
+    }
+  },
+  "fc_small_choice": "Student selected h1=60 and h2=42, halving both baseline fully connected widths."
+}

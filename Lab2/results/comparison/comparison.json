@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "model_name": "baseline",
+      "architecture": {
+        "c1": 6,
+        "c2": 16,
+        "h1": 120,
+        "h2": 84
+      },
+      "parameter_count": 44426,
+      "test_accuracy_pct": 79.72,
+      "mean_train_epoch_s": 13.859619931199996,
+      "inference_median_ms": 2.6602734999999997,
+      "inference_p95_ms": 2.7121177,
+      "checkpoint_sha256": "47071f5d25f7aa5fef7414a187e6ea0ddf9ef12e01de022ff453a3d5ca9b870d",
+      "input_sha256": "684d923195976f9ba3c9735c8253a7035aef4e23f9c9773334ef8ad22ddcd89f",
+      "benchmark_environment": {
+        "timestamp_utc": "2026-09-21T22:20:23.256833+00:00",
+        "python": "3.13.5",
+        "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+        "machine": "aarch64",
+        "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+        "torch": "2.8.0+cpu",
+        "numpy": "2.2.6",
+        "threads": 1,
+        "interop_threads": 1,
+        "execution_device": "cpu"
+      },
+      "speedup_vs_baseline": 1.0,
+      "accuracy_change_pp": 0.0
+    },
+    {
+      "model_name": "conv_small",
+      "architecture": {
+        "c1": 3,
+        "c2": 8,
+        "h1": 120,
+        "h2": 84
+      },
+      "parameter_count": 27180,
+      "test_accuracy_pct": 78.05,
+      "mean_train_epoch_s": 10.16528428019999,
+      "inference_median_ms": 2.3970385,
+      "inference_p95_ms": 2.47357535,
+      "checkpoint_sha256": "2a90692fcab51c41d977d72d5e5480ffbb0e8f85c4845b3ca54e3319857c78e5",
+      "input_sha256": "684d923195976f9ba3c9735c8253a7035aef4e23f9c9773334ef8ad22ddcd89f",
+      "benchmark_environment": {
+        "timestamp_utc": "2026-09-21T22:21:16.998504+00:00",
+        "python": "3.13.5",
+        "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+        "machine": "aarch64",
+        "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+        "torch": "2.8.0+cpu",
+        "numpy": "2.2.6",
+        "threads": 1,
+        "interop_threads": 1,
+        "execution_device": "cpu"
+      },
+      "speedup_vs_baseline": 1.1098167593052843,
+      "accuracy_change_pp": -1.6700000000000017
+    },
+    {
+      "model_name": "fc_small",
+      "architecture": {
+        "c1": 6,
+        "c2": 16,
+        "h1": 60,
+        "h2": 42
+      },
+      "parameter_count": 20984,
+      "test_accuracy_pct": 78.84,
+      "mean_train_epoch_s": 13.556668906200002,
+      "inference_median_ms": 2.4440160000000004,
+      "inference_p95_ms": 2.50130845,
+      "checkpoint_sha256": "3bb95a2fc576b1b13bdc6aa53adbd6e3d632521a1376bca8b0315b184af26ce5",
+      "input_sha256": "684d923195976f9ba3c9735c8253a7035aef4e23f9c9773334ef8ad22ddcd89f",
+      "benchmark_environment": {
+        "timestamp_utc": "2026-09-21T22:22:40.340334+00:00",
+        "python": "3.13.5",
+        "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+        "machine": "aarch64",
+        "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+        "torch": "2.8.0+cpu",
+        "numpy": "2.2.6",
+        "threads": 1,
+        "interop_threads": 1,
+        "execution_device": "cpu"
+      },
+      "speedup_vs_baseline": 1.0884844861899428,
+      "accuracy_change_pp": -0.8799999999999955
+    }
+  ]
+}

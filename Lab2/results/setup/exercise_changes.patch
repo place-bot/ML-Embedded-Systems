@@ -1,0 +1,45 @@
+diff --git a/models.py b/models.py
+index 3257434..6f19ec6 100644
+--- a/models.py
++++ b/models.py
+@@ -5,8 +5,8 @@ from torch import nn
+ # Keep baseline unchanged. Add dictionaries with the same four keys for B and C.
+ MODEL_CONFIGS = {
+     'baseline': {'c1': 6, 'c2': 16, 'h1': 120, 'h2': 84},
+-    'conv_small': None,  # TODO B: convolution channels 3/8; hidden widths 120/84.
+-    'fc_small': None,    # TODO C: channels 6/16; choose h1 in 1..60 and h2 in 1..42.
++    'conv_small': {'c1': 3, 'c2': 8, 'h1': 120, 'h2': 84},
++    'fc_small': {'c1': 6, 'c2': 16, 'h1': 60, 'h2': 42},
+ }
+ 
+ 
+@@ -49,6 +49,6 @@ class LeNet(nn.Module):
+         )
+ 
+     def forward(self, x):
+-        # TODO: features -> flatten from dimension 1 -> classifier.
+-        # Preserve the batch dimension; return logits, without softmax.
+-        raise NotImplementedError('Complete LeNet.forward in models.py using Tutorial Step 2.')
++        x = self.features(x)
++        x = torch.flatten(x, start_dim=1)
++        return self.classifier(x)
+diff --git a/train_step.py b/train_step.py
+index 63a777f..ca3a70d 100644
+--- a/train_step.py
++++ b/train_step.py
+@@ -2,10 +2,10 @@
+ 
+ 
+ def train_step(model, inputs, targets, loss_fn, optimizer):
+-    # TODO: clear old gradients before this forward pass.
+-    raise NotImplementedError('Complete train_step.py using Tutorial Step 3.')
++    optimizer.zero_grad()
+     logits = model(inputs)
+     loss = loss_fn(logits, targets)
+-    # TODO: compute gradients from loss, then update the parameters.
+-    correct = (logits.detach().argmax(dim=1) == targets).sum().item()
+-    return loss.detach().item(), correct
++    loss.backward()
++    optimizer.step()
++    correct = (logits.detach().argmax(dim=1) == targets)
++    return loss.detach().item(), correct.sum().item()

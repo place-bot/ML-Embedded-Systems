@@ -1,0 +1,91 @@
+Ready at {'temperature_c': 38.946, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+
+START train_baseline 2026-09-21T22:12:28.483363+00:00
+baseline: 44,426 parameters, 5 epochs, CPU / one thread
+Epoch 1/5: loss=1.1053, validation=71.40%, train=13.88 s
+Epoch 2/5: loss=0.6719, validation=75.00%, train=13.87 s
+Epoch 3/5: loss=0.6057, validation=78.05%, train=13.83 s
+Epoch 4/5: loss=0.5607, validation=78.65%, train=13.85 s
+Epoch 5/5: loss=0.5184, validation=79.65%, train=13.87 s
+Saved /home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt. Next run evaluate.py in a new process after all three architectures are fixed.
+PASS train_baseline
+
+START baseline_reload 2026-09-21T22:13:50.197423+00:00
+PASS reload: baseline; validation 79.65%. No test evaluation requested.
+PASS baseline_reload
+Waiting for comparable starting temperature: {'temperature_c': 46.738, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 42.355, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 40.407, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Ready at {'temperature_c': 39.433, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+
+START train_conv_small 2026-09-21T22:14:44.011856+00:00
+conv_small: 27,180 parameters, 5 epochs, CPU / one thread
+Epoch 1/5: loss=1.1562, validation=69.75%, train=10.23 s
+Epoch 2/5: loss=0.7162, validation=73.85%, train=10.15 s
+Epoch 3/5: loss=0.6471, validation=76.00%, train=10.16 s
+Epoch 4/5: loss=0.6096, validation=77.10%, train=10.15 s
+Epoch 5/5: loss=0.5676, validation=78.00%, train=10.14 s
+Saved /home/jingyi/CSE60685-FA26-Lab-2/results/conv_small/checkpoint.pt. Next run evaluate.py in a new process after all three architectures are fixed.
+PASS train_conv_small
+Waiting for comparable starting temperature: {'temperature_c': 47.225, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 41.868, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 40.894, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 40.407, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Ready at {'temperature_c': 38.946, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+
+START train_fc_small 2026-09-21T22:16:46.730111+00:00
+fc_small: 20,984 parameters, 5 epochs, CPU / one thread
+Epoch 1/5: loss=1.1932, validation=70.00%, train=13.57 s
+Epoch 2/5: loss=0.7104, validation=74.15%, train=13.54 s
+Epoch 3/5: loss=0.6309, validation=76.50%, train=13.55 s
+Epoch 4/5: loss=0.5869, validation=76.85%, train=13.58 s
+Epoch 5/5: loss=0.5446, validation=79.20%, train=13.54 s
+Saved /home/jingyi/CSE60685-FA26-Lab-2/results/fc_small/checkpoint.pt. Next run evaluate.py in a new process after all three architectures are fixed.
+PASS train_fc_small
+
+START evaluate_baseline 2026-09-21T22:18:06.839046+00:00
+PASS reload: baseline; test 7972/10000 = 79.72%
+PASS evaluate_baseline
+
+START evaluate_conv_small 2026-09-21T22:18:20.149831+00:00
+PASS reload: conv_small; test 7805/10000 = 78.05%
+PASS evaluate_conv_small
+
+START evaluate_fc_small 2026-09-21T22:18:32.977543+00:00
+PASS reload: fc_small; test 7884/10000 = 78.84%
+PASS evaluate_fc_small
+Waiting for comparable starting temperature: {'temperature_c': 48.686, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 43.329, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 42.355, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 42.842, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 42.355, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 41.381, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Ready at {'temperature_c': 39.92, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+
+START benchmark_baseline 2026-09-21T22:20:16.317980+00:00
+baseline: inference median 2.6603 ms; p95 2.7121 ms; 100 recorded samples
+PASS benchmark_baseline
+Waiting for comparable starting temperature: {'temperature_c': 44.303, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 40.894, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 40.407, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Ready at {'temperature_c': 39.92, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+
+START benchmark_conv_small 2026-09-21T22:21:09.621133+00:00
+conv_small: inference median 2.3970 ms; p95 2.4736 ms; 100 recorded samples
+PASS benchmark_conv_small
+Waiting for comparable starting temperature: {'temperature_c': 43.816, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 41.868, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 41.381, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 40.407, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting for comparable starting temperature: {'temperature_c': 40.407, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Ready at {'temperature_c': 39.92, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+
+START benchmark_fc_small 2026-09-21T22:22:33.379547+00:00
+fc_small: inference median 2.4440 ms; p95 2.5013 ms; 100 recorded samples
+PASS benchmark_fc_small
+
+START comparison 2026-09-21T22:22:41.698267+00:00
+baseline      44426 parameters; 79.72%; 13.86 s/epoch; 2.6603 ms
+conv_small    27180 parameters; 78.05%; 10.17 s/epoch; 2.3970 ms
+fc_small      20984 parameters; 78.84%; 13.56 s/epoch; 2.4440 ms
+PASS comparison

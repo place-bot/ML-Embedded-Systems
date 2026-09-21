@@ -1,5 +1,15 @@
 # CSE 60685 - Machine Learning for Embedded Systems
 
+## Lab 2: LeNet architecture comparison on the Raspberry Pi
+
+The three required designs have completed training, full test-set evaluation and inference measurements on the supplied Pi 4B. [Lab 2 evidence and reproduction notes](Lab2/EVIDENCE.md) link the retained source, checkpoints, original JSON/CSV files and checks. **Canvas submission: [Lab2_Report.pdf](Lab2/results/Lab2_Report.pdf)**, containing one page of analysis plus the required AI Attribution Appendix. [LaTeX source](Lab2/report/Lab2_Report.tex) is retained. The report incorporates the student's preference for C's parameter/accuracy tradeoff and explains the architecture-dependent runtime results.
+
+| Model | Parameters | Test accuracy | Mean training (s/epoch) | Median inference (ms) |
+| --- | ---: | ---: | ---: | ---: |
+| A: baseline | 44,426 | 79.72% | 13.8596 | 2.6602735 |
+| B: conv-small | 27,180 | 78.05% | 10.1653 | 2.3970385 |
+| C: FC-small (60/42) | 20,984 | 78.84% | 13.5567 | 2.4440160 |
+
 ## Lab 1: image classification and inference latency
 
 This repository retains the completed timing exercise and actual measurements from the supplied Raspberry Pi 4B. All inference and camera runs were performed on the Pi. The OMEN computer was used for SSH, backups, report typesetting, and offline verification.

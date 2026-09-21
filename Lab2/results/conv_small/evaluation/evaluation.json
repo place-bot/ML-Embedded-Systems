@@ -1,0 +1,60 @@
+{
+  "model_name": "conv_small",
+  "architecture": {
+    "c1": 3,
+    "c2": 8,
+    "h1": 120,
+    "h2": 84
+  },
+  "parameter_count": 27180,
+  "checkpoint_sha256": "2a90692fcab51c41d977d72d5e5480ffbb0e8f85c4845b3ca54e3319857c78e5",
+  "split_sha256": "76639088a470fa016cf664fd363011d614d972605c8c43cbebd70bbc3594f443",
+  "data_manifest_sha256": "a9cb65a41582fb1cdada23270175136f0161505616147f1dac9e013297507d51",
+  "course_config": {
+    "schema_version": 1,
+    "dataset": "Fashion-MNIST",
+    "train_size": 12000,
+    "validation_size": 2000,
+    "test_size": 10000,
+    "epochs": 5,
+    "batch_size": 64,
+    "evaluation_batch_size": 256,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "seed": 42,
+    "threads": 1,
+    "interop_threads": 1,
+    "num_workers": 0,
+    "warmup": 10,
+    "runs": 100,
+    "input_shape": [
+      1,
+      1,
+      28,
+      28
+    ],
+    "dtype": "float32",
+    "preprocessing": "28x28 grayscale uint8 divided by 255; no resize or additional normalization"
+  },
+  "schema_version": 1,
+  "test_accuracy_pct": 78.05,
+  "test_correct": 7805,
+  "test_count": 10000,
+  "test_mean_loss": 0.5856336762428284,
+  "validation_accuracy_pct": 78.0,
+  "reload_verified": true,
+  "reload_max_abs_error": 0.0,
+  "mean_train_epoch_s": 10.16528428019999,
+  "environment": {
+    "timestamp_utc": "2026-09-21T22:18:31.623798+00:00",
+    "python": "3.13.5",
+    "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.2.6",
+    "threads": 1,
+    "interop_threads": 1,
+    "execution_device": "cpu"
+  }
+}
