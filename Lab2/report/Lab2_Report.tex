@@ -52,26 +52,12 @@ I would choose \textbf{C} because my priority is fewer parameters and the accura
 Lab 2 --- excluded from the one-page analysis limit
 \end{center}
 
-\topic{Tool and scope}
-OpenAI Codex assisted with understanding the course materials, explaining hardware steps in Chinese, setting up the Pi environment through SSH, transcribing supplied tutorial code, running commands, checking evidence, explaining the comparisons, translating/editing my interpretation, and LaTeX formatting. The OMEN laptop was the control and typesetting machine; the reported training, accuracy and inference measurements all came from the actual supplied Raspberry Pi.
+\textbf{Tool.} OpenAI Codex.
 
-\topic{Prompts and student decisions}
-The following summarizes the relevant prompts and responses (Chinese messages are translated into English here; the detailed session record is retained):
-\begin{enumerate}
-\setlength{\itemsep}{3pt}
-\item ``Lab 2 has been released; explain it step by step and help me complete it.'' I subsequently requested Chinese explanations.
-\item I reported the card/power state and confirmed the measurement cooling condition: case closed, fan running.
-\item For model C, I chose ``60 and 42 --- halve both layers'' after the baseline sizes and smaller-width options were explained.
-\item ``Are our current A, B and C models all compliant with Lab 2?'' Codex compared the configurations with the assignment and inspected the three passing checks on the Pi.
-\item After seeing the measured comparison, I was asked which model I would choose and how I understood C having fewer parameters while B was faster. My response was: ``I think the model with the fewest parameters is best because the accuracies are all quite similar. C has few parameters, but B is faster; this is related to the architecture.'' I then explained that C keeps convolutional computation and shrinks the final fully connected part. Codex clarified that both hidden widths change (120/84 to 60/42), with ten output classes unchanged. These responses formed the basis of the discussion; Codex translated/edited them and made the numerical tradeoffs explicit.
-\end{enumerate}
+\textbf{Main prompts} (translated/summarized): ``Explain Lab 2 step by step and help me complete it''; ``Are A, B and C compliant with the requirements?''; ``Make the attribution appendix more concise.''
 
-\topic{Code and operational assistance}
-The completed \texttt{LeNet.forward} and \texttt{train\_step} function bodies were transcribed from the instructor's Tutorial Steps 2 and 3. They were supplied course code, rather than a newly generated AI model implementation. B's dictionary uses the prescribed 3/8 channels and 120/84 hidden widths; C's dictionary uses my chosen 6/16 channels and 60/42 hidden widths. Among instructor files, only \texttt{models.py} and \texttt{train\_step.py} changed.
+\textbf{Assistance.} Codex helped interpret the instructions, set up the Pi through SSH, transcribe Tutorial Steps 2--3 into \texttt{models.py} and \texttt{train\_step.py}, and execute the supplied training, evaluation and benchmark commands. It wrote separate helpers for sequential execution, cooling, logging and file verification, and assisted with result interpretation, English wording and LaTeX formatting. The instructor's reference experiment scripts remained unchanged.
 
-Codex wrote an external operational helper to invoke the unchanged instructor programs sequentially, record commands and telemetry, preserve output logs and wait for cooling. It also wrote an export audit and the LaTeX generation support. These helpers are disclosed as AI-written assistance; they are separate from the course model and timing implementation. No reported values were generated on OMEN, invented or substituted for Pi measurements.
-
-\topic{Validation and limitations}
-The Pi environment and all three model checks passed. Every design completed five epochs, checkpoint reload verification, all 10,000 test images and the required 10 warmups/100 timed inference calls. The instructor's summarizer verified provenance and recomputed statistics. A separate audit passed 144 source, transfer and measurement checks, including hashes and comparisons with the raw CSV files. All observations are retained; no timed samples were discarded. The experiment used one fixed seed and one trained checkpoint per model, so the report treats the results as this measured comparison, without claiming significance across repeated training runs.
+\textbf{Student decisions and evidence.} I selected C's hidden widths of 60/42 and chose C after considering the measured tradeoff, prioritizing fewer parameters while accepting the accuracy difference. I explained that C preserves convolutional computation while shrinking the fully connected classifier. All reported measurements came from the actual Raspberry Pi. Checkpoints, original JSON/CSV results and the detailed assistance log are retained with the code.
 
 \end{document}

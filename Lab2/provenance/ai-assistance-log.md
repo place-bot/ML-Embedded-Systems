@@ -14,6 +14,7 @@ Tool: OpenAI Codex. This log will be updated with concrete actions and the stude
 7. "我们现在这个a b c都是符合lab2要求的对吧" (Are the current A, B and C models all compliant with Lab 2?)
 8. Student interpretation: "我觉得参数量最少的最好 因为这些准确率都差不多 然后c参数很少 但是b更快 这和架构有关系" (Prefers the fewest parameters, views these accuracy differences as small, and attributes B being faster than C to architecture.)
 9. Student follow-up: "c没有裁剪卷积计算 只是缩小最后的那一层全连接层" (C leaves convolutional computation unchanged and shrinks the final fully connected part.) Codex clarified that both hidden widths change, from 120/84 to 60/42; the output remains ten classes.
+10. The student requested a more concise AI Attribution Appendix. Codex condensed it from 524 to 167 words, retaining the tool, key prompts, assistance scope and student decisions. The analysis page remained textually and visually identical. This document-only revision was made on OMEN after the Pi had been shut down.
 
 ## Assistance so far
 

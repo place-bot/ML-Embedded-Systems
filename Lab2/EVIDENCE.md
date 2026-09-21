@@ -53,6 +53,8 @@ Canvas submission is [Lab2_Report.pdf](results/Lab2_Report.pdf): one page of ana
 
 ## Backup and safe shutdown
 
-The final PDF and LaTeX source were copied back to the Pi and verified alongside all original experiment files; see [final Pi verification](provenance/final_pi_verification.log). A complete archive (excluding the reinstallable environment and dataset) was downloaded to OMEN and its SHA-256 matched the Pi: `a08273ef52fe48f8a7370af412ed5e6f1107fdd174dac872268b755053508ac2`.
+The completed report and LaTeX source were copied back to the Pi and verified alongside all original experiment files; see [final Pi verification](provenance/final_pi_verification.log). A complete archive (excluding the reinstallable environment and dataset) was downloaded to OMEN and its SHA-256 matched the Pi: `a08273ef52fe48f8a7370af412ed5e6f1107fdd174dac872268b755053508ac2`.
+
+After shutdown, the student requested a shorter AI Attribution Appendix. It was condensed from 524 to 167 words on OMEN; the analysis page remains textually and visually identical. The current PDF, LaTeX and document hashes in this repository reflect that revision. The immutable Pi archive retains the earlier appendix version; all original experiment evidence remains unchanged.
 
 At September 21, 2026, 22:28:27 UTC, `poweroff` was invoked through `sudo`, returned successfully with exit code 0, and SSH subsequently disconnected. The student then confirmed that the green activity light had stopped flashing. The [shutdown log](provenance/shutdown.log) is retained. The report has been prepared for the student's Canvas upload; no Canvas submission was made by the assistant.
