@@ -1,5 +1,17 @@
 # CSE 60685 - Machine Learning for Embedded Systems
 
+## Lab 3: structured pruning and fine-tuning on the Raspberry Pi
+
+The required Control, S25 and S50 branches completed fine-tuning, full test-set evaluation and inference measurements on the supplied Pi 4B. All instructor code remains unchanged. The source is the student's own verified five-epoch Lab 2 A checkpoint; every branch, including Control, received three additional training epochs. [Lab 3 evidence and reproduction notes](Lab3/EVIDENCE.md) map each requirement to the retained checkpoints, original JSON/CSV and logs. **Canvas submission: [Lab3_Report.pdf](Lab3/results/Lab3_Report.pdf)**, containing one page of analysis and a concise AI Attribution Appendix. [LaTeX source](Lab3/report/Lab3_Report.tex) is retained.
+
+| Model | Parameters | Validation before -> after FT (%) | Test accuracy | Median inference (ms) |
+| --- | ---: | ---: | ---: | ---: |
+| Control | 44,426 | 79.65 -> 82.60 | 81.77% | 2.6906365 |
+| S25 | 36,142 | 77.45 -> 82.35 | 81.70% | 2.6027935 |
+| S50 | 27,858 | 64.05 -> 81.40 | 81.00% | 2.5075610 |
+
+The student chose S50 to prioritize fewer parameters. Compared with Control, its total parameter count is 37.29% lower, test accuracy is 0.77 percentage points lower, and measured median inference latency is 6.80% lower. The evidence passed 186 read-only checks on OMEN. The Pi completed a successful operating-system shutdown and the student confirmed that its green activity LED stopped.
+
 ## Lab 2: LeNet architecture comparison on the Raspberry Pi
 
 The three required designs have completed training, full test-set evaluation and inference measurements on the supplied Pi 4B. [Lab 2 evidence and reproduction notes](Lab2/EVIDENCE.md) link the retained source, checkpoints, original JSON/CSV files and checks. **Canvas submission: [Lab2_Report.pdf](Lab2/results/Lab2_Report.pdf)**, containing one page of analysis plus the required AI Attribution Appendix. [LaTeX source](Lab2/report/Lab2_Report.tex) is retained. The report incorporates the student's preference for C's parameter/accuracy tradeoff and explains the architecture-dependent runtime results.

@@ -1,0 +1,2 @@
+# Preserve the exact bytes exported by the Raspberry Pi and report compiler.
+* -text

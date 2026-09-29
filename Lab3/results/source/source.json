@@ -1,0 +1,33 @@
+{
+  "origin": {
+    "lab2_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt",
+    "lab2_epochs": 5,
+    "used_fallback": false
+  },
+  "architecture": {
+    "c1": 6,
+    "c2": 16,
+    "h1": 120,
+    "h2": 84
+  },
+  "parameter_count": 44426,
+  "validation": {
+    "correct": 1593,
+    "count": 2000,
+    "accuracy_pct": 79.65,
+    "mean_loss": 0.5212505483627319
+  },
+  "reload_max_abs_error": 0.0,
+  "environment": {
+    "timestamp_utc": "2026-09-29T17:49:31.165885+00:00",
+    "python": "3.13.5",
+    "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.2.6",
+    "threads": 1,
+    "interop_threads": 1,
+    "execution_device": "cpu"
+  }
+}

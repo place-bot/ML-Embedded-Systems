@@ -1,0 +1,35 @@
+{
+  "model_name": "s25",
+  "pruning": {
+    "method": "conv2_l1_channel",
+    "scope": "Conv2 output filters and matching FC1 input columns",
+    "removed_conv2_channels": 4,
+    "keep_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      10,
+      11,
+      13,
+      14,
+      15
+    ],
+    "compact_max_abs_error": 0.0
+  },
+  "parameter_count": 36142,
+  "before_validation": {
+    "correct": 1549,
+    "count": 2000,
+    "accuracy_pct": 77.45,
+    "mean_loss": 0.5924088439941406
+  },
+  "origin": {
+    "lab2_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt",
+    "lab2_epochs": 5,
+    "used_fallback": false
+  }
+}

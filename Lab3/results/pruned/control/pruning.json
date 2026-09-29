@@ -1,0 +1,19 @@
+{
+  "model_name": "control",
+  "pruning": {
+    "method": "none",
+    "scope": "unpruned control"
+  },
+  "parameter_count": 44426,
+  "before_validation": {
+    "correct": 1593,
+    "count": 2000,
+    "accuracy_pct": 79.65,
+    "mean_loss": 0.5212505483627319
+  },
+  "origin": {
+    "lab2_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt",
+    "lab2_epochs": 5,
+    "used_fallback": false
+  }
+}

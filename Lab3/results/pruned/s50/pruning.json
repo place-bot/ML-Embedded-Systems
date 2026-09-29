@@ -1,0 +1,31 @@
+{
+  "model_name": "s50",
+  "pruning": {
+    "method": "conv2_l1_channel",
+    "scope": "Conv2 output filters and matching FC1 input columns",
+    "removed_conv2_channels": 8,
+    "keep_indices": [
+      0,
+      3,
+      5,
+      6,
+      10,
+      11,
+      14,
+      15
+    ],
+    "compact_max_abs_error": 0.0
+  },
+  "parameter_count": 27858,
+  "before_validation": {
+    "correct": 1281,
+    "count": 2000,
+    "accuracy_pct": 64.05,
+    "mean_loss": 0.9567087020874023
+  },
+  "origin": {
+    "lab2_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt",
+    "lab2_epochs": 5,
+    "used_fallback": false
+  }
+}

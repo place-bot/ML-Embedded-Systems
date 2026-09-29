@@ -1,0 +1,114 @@
+Cloning into 'CSE60685-FA26-Lab-3'...
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting torch==2.8.0 (from -r requirements.txt (line 2))
+  Using cached torch-2.8.0-cp313-cp313-manylinux_2_28_aarch64.whl.metadata (30 kB)
+Collecting torchvision==0.23.0 (from -r requirements.txt (line 3))
+  Using cached torchvision-0.23.0-cp313-cp313-manylinux_2_28_aarch64.whl.metadata (6.1 kB)
+Collecting numpy==2.2.6 (from -r requirements.txt (line 4))
+  Using cached numpy-2.2.6-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (63 kB)
+Collecting Pillow==12.3.0 (from -r requirements.txt (line 5))
+  Using cached pillow-12.3.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (9.1 kB)
+Collecting filelock==3.32.6 (from -r requirements.txt (line 6))
+  Using cached https://www.piwheels.org/simple/filelock/filelock-3.32.6-py3-none-any.whl.metadata (2.0 kB)
+Collecting fsspec==2026.7.0 (from -r requirements.txt (line 7))
+  Using cached https://www.piwheels.org/simple/fsspec/fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+Collecting Jinja2==3.1.6 (from -r requirements.txt (line 8))
+  Using cached https://www.piwheels.org/simple/jinja2/jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting MarkupSafe==3.0.3 (from -r requirements.txt (line 9))
+  Using cached markupsafe-3.0.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.7 kB)
+Collecting mpmath==1.3.0 (from -r requirements.txt (line 10))
+  Using cached https://www.piwheels.org/simple/mpmath/mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting networkx==3.6.1 (from -r requirements.txt (line 11))
+  Using cached https://www.piwheels.org/simple/networkx/networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting setuptools==84.0.0 (from -r requirements.txt (line 12))
+  Using cached https://www.piwheels.org/simple/setuptools/setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting sympy==1.14.0 (from -r requirements.txt (line 13))
+  Using cached https://www.piwheels.org/simple/sympy/sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting typing_extensions==4.16.0 (from -r requirements.txt (line 14))
+  Using cached https://www.piwheels.org/simple/typing-extensions/typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Using cached torch-2.8.0-cp313-cp313-manylinux_2_28_aarch64.whl (101.9 MB)
+Using cached torchvision-0.23.0-cp313-cp313-manylinux_2_28_aarch64.whl (2.4 MB)
+Using cached numpy-2.2.6-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.0 MB)
+Using cached pillow-12.3.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.3 MB)
+Using cached https://www.piwheels.org/simple/filelock/filelock-3.32.6-py3-none-any.whl (100 kB)
+Using cached https://www.piwheels.org/simple/fsspec/fsspec-2026.7.0-py3-none-any.whl (206 kB)
+Using cached https://www.piwheels.org/simple/jinja2/jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached markupsafe-3.0.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (24 kB)
+Using cached https://www.piwheels.org/simple/mpmath/mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached https://www.piwheels.org/simple/networkx/networkx-3.6.1-py3-none-any.whl (2.1 MB)
+Using cached https://www.piwheels.org/simple/setuptools/setuptools-84.0.0-py3-none-any.whl (818 kB)
+Using cached https://www.piwheels.org/simple/sympy/sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached https://www.piwheels.org/simple/typing-extensions/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: mpmath, typing_extensions, sympy, setuptools, Pillow, numpy, networkx, MarkupSafe, fsspec, filelock, Jinja2, torch, torchvision
+
+Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 Pillow-12.3.0 filelock-3.32.6 fsspec-2026.7.0 mpmath-1.3.0 networkx-3.6.1 numpy-2.2.6 setuptools-84.0.0 sympy-1.14.0 torch-2.8.0 torchvision-0.23.0 typing_extensions-4.16.0
+Python 3.13.5; PyTorch 2.8.0+cpu; torchvision 0.23.0
+PASS: CPU forward/backward; one intra-op and one inter-op thread.
+Downloading train-images-idx3-ubyte.gz...
+Downloading train-labels-idx1-ubyte.gz...
+Downloading t10k-images-idx3-ubyte.gz...
+Downloading t10k-labels-idx1-ubyte.gz...
+Ready: 12000 training / 2000 validation / 10000 test images.
+Lab 3 environment and official dataset checks completed.
+START import_baseline 2026-09-29T17:49:24.084801+00:00
+PASS source: 44,426 parameters; validation 79.65%; fallback=False
+PASS import_baseline
+START check_pruning 2026-09-29T17:49:32.525688+00:00
+PASS s25: 12 Conv2 channels; 192 FC1 inputs; 36,142 parameters; max logit error 0
+PASS s50: 8 Conv2 channels; 128 FC1 inputs; 27,858 parameters; max logit error 0
+PASS check_pruning
+START prune_models 2026-09-29T17:49:37.039561+00:00
+control: 44,426 parameters; validation before fine-tuning 79.65%
+s25: 36,142 parameters; validation before fine-tuning 77.45%
+s50: 27,858 parameters; validation before fine-tuning 64.05%
+PASS prune_models
+START finetune_control 2026-09-29T17:49:47.369831+00:00
+control epoch 1/3: loss 0.4710; validation 81.95%; train 13.93 s
+control epoch 2/3: loss 0.4626; validation 82.20%; train 13.88 s
+control epoch 3/3: loss 0.4578; validation 82.60%; train 13.91 s
+Saved last-epoch deployment checkpoint.
+PASS finetune_control
+START finetune_s25 2026-09-29T17:50:39.293703+00:00
+s25 epoch 1/3: loss 0.4887; validation 81.40%; train 12.73 s
+s25 epoch 2/3: loss 0.4739; validation 81.75%; train 12.71 s
+s25 epoch 3/3: loss 0.4684; validation 82.35%; train 12.70 s
+Saved last-epoch deployment checkpoint.
+PASS finetune_s25
+START finetune_s50 2026-09-29T17:51:27.581381+00:00
+s50 epoch 1/3: loss 0.5722; validation 80.60%; train 12.08 s
+s50 epoch 2/3: loss 0.5005; validation 81.10%; train 12.11 s
+s50 epoch 3/3: loss 0.4899; validation 81.40%; train 12.11 s
+Saved last-epoch deployment checkpoint.
+PASS finetune_s50
+START evaluate_control 2026-09-29T17:52:13.939441+00:00
+PASS reload: control; test 8177/10000 = 81.77%
+PASS evaluate_control
+START evaluate_s25 2026-09-29T17:52:26.522506+00:00
+PASS reload: s25; test 8170/10000 = 81.70%
+PASS evaluate_s25
+START evaluate_s50 2026-09-29T17:52:39.199949+00:00
+PASS reload: s50; test 8100/10000 = 81.00%
+PASS evaluate_s50
+Waiting to cool: {'temperature_c': 45.764, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+Waiting to cool: {'temperature_c': 41.868, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+Waiting to cool: {'temperature_c': 42.355, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+Waiting to cool: {'temperature_c': 40.407, 'cpu_frequency_khz': 600000, 'throttled_hex': '0x0'}
+START benchmark_control 2026-09-29T17:53:51.811625+00:00
+control: inference median 2.6906 ms; p95 2.7344 ms; 100 recorded samples
+PASS benchmark_control
+Waiting to cool: {'temperature_c': 42.842, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+Waiting to cool: {'temperature_c': 40.894, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+START benchmark_s25 2026-09-29T17:54:29.699680+00:00
+s25: inference median 2.6028 ms; p95 2.6621 ms; 100 recorded samples
+PASS benchmark_s25
+Waiting to cool: {'temperature_c': 43.329, 'cpu_frequency_khz': 1800000, 'throttled_hex': '0x0'}
+START benchmark_s50 2026-09-29T17:54:52.583245+00:00
+s50: inference median 2.5076 ms; p95 2.5705 ms; 100 recorded samples
+PASS benchmark_s50
+START comparison 2026-09-29T17:55:00.430496+00:00
+| Model | Parameters | Validation before -> after FT (%) | Test (%) | Median (ms) |
+| --- | ---: | ---: | ---: | ---: |
+| control | 44,426 | 79.65 -> 82.60 | 81.77 | 2.6906 |
+| s25 | 36,142 | 77.45 -> 82.35 | 81.70 | 2.6028 |
+| s50 | 27,858 | 64.05 -> 81.40 | 81.00 | 2.5076 |
+PASS comparison

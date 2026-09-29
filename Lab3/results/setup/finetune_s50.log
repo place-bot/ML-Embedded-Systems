@@ -1,0 +1,4 @@
+s50 epoch 1/3: loss 0.5722; validation 80.60%; train 12.08 s
+s50 epoch 2/3: loss 0.5005; validation 81.10%; train 12.11 s
+s50 epoch 3/3: loss 0.4899; validation 81.40%; train 12.11 s
+Saved last-epoch deployment checkpoint.

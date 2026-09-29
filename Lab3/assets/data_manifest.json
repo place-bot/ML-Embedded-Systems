@@ -1,0 +1,26 @@
+{
+  "dataset": "Fashion-MNIST",
+  "source": "https://github.com/zalandoresearch/fashion-mnist",
+  "files": [
+    {
+      "name": "train-images-idx3-ubyte.gz",
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/train-images-idx3-ubyte.gz",
+      "raw_name": "train-images-idx3-ubyte"
+    },
+    {
+      "name": "train-labels-idx1-ubyte.gz",
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/train-labels-idx1-ubyte.gz",
+      "raw_name": "train-labels-idx1-ubyte"
+    },
+    {
+      "name": "t10k-images-idx3-ubyte.gz",
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/t10k-images-idx3-ubyte.gz",
+      "raw_name": "t10k-images-idx3-ubyte"
+    },
+    {
+      "name": "t10k-labels-idx1-ubyte.gz",
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/t10k-labels-idx1-ubyte.gz",
+      "raw_name": "t10k-labels-idx1-ubyte"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "model_name": "s25",
+  "checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/s25/checkpoint.pt",
+  "runtime": "PyTorch eager CPU",
+  "threads": 1,
+  "warmup": 10,
+  "runs": 100,
+  "input_shape": [
+    1,
+    1,
+    28,
+    28
+  ],
+  "input_dtype": "float32",
+  "input_index": 12532,
+  "input_label": 0,
+  "inference": {
+    "sample_count": 100,
+    "median_ms": 2.6027934999999998,
+    "p95_ms": 2.66213795,
+    "mean_ms": 2.5991470399999996,
+    "min_ms": 2.52618,
+    "max_ms": 2.752881
+  },
+  "environment": {
+    "timestamp_utc": "2026-09-29T17:54:36.213765+00:00",
+    "python": "3.13.5",
+    "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.2.6",
+    "threads": 1,
+    "interop_threads": 1,
+    "execution_device": "cpu"
+  },
+  "telemetry": {
+    "before": {
+      "temperature_c": 42.842,
+      "cpu_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    },
+    "after": {
+      "temperature_c": 43.329,
+      "cpu_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    }
+  },
+  "timing_scope": "Synchronous CPU model(x), including Python call overhead; excludes loading, preprocessing, argmax/softmax, printing and output files."
+}

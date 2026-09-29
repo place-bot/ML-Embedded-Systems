@@ -1,0 +1,31 @@
+{
+  "model_name": "s25",
+  "validation_before_ft_pct": 77.45,
+  "validation_after_ft_pct": 82.35,
+  "mean_train_epoch_s": 12.716214868666688,
+  "parameter_count": 36142,
+  "environment": {
+    "timestamp_utc": "2026-09-29T17:51:26.216537+00:00",
+    "python": "3.13.5",
+    "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.2.6",
+    "threads": 1,
+    "interop_threads": 1,
+    "execution_device": "cpu"
+  },
+  "telemetry": {
+    "before": {
+      "temperature_c": 45.277,
+      "cpu_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    },
+    "after": {
+      "temperature_c": 46.738,
+      "cpu_frequency_khz": 1800000,
+      "throttled_hex": "0x0"
+    }
+  }
+}

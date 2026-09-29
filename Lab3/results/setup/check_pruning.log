@@ -1,0 +1,2 @@
+PASS s25: 12 Conv2 channels; 192 FC1 inputs; 36,142 parameters; max logit error 0
+PASS s50: 8 Conv2 channels; 128 FC1 inputs; 27,858 parameters; max logit error 0

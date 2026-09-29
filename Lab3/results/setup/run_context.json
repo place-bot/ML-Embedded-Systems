@@ -1,0 +1,499 @@
+{
+  "execution_device": "Supplied Raspberry Pi 4B CPU, not the OMEN control computer.",
+  "power": "Supplied CanaKit USB-C adapter.",
+  "cooling": "Case lid closed and fan running; confirmed by student on 2026-09-29.",
+  "execution": "Sequential execution of unchanged instructor programs.",
+  "pre_benchmark_launch_temperature_limit_c": 40.0,
+  "source": {
+    "path": "/home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt",
+    "sha256": "47071f5d25f7aa5fef7414a187e6ea0ddf9ef12e01de022ff453a3d5ca9b870d",
+    "used_fallback": false
+  },
+  "stages": [
+    {
+      "label": "import_baseline",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "import_baseline.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt",
+        "--output",
+        "results/source"
+      ],
+      "started_utc": "2026-09-29T17:49:24.084801+00:00",
+      "before": {
+        "temperature_c": 42.355,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-2/results/baseline/checkpoint.pt",
+      "input_sha256": "47071f5d25f7aa5fef7414a187e6ea0ddf9ef12e01de022ff453a3d5ca9b870d",
+      "finished_utc": "2026-09-29T17:49:32.508973+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 43.816,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "47071f5d25f7aa5fef7414a187e6ea0ddf9ef12e01de022ff453a3d5ca9b870d",
+      "output_sha256": {
+        "results/source/checkpoint.pt": "80598dd399626fec7af47e5c4bff0a82bcaae0809d4213f0ad6e0a34cda10e23",
+        "results/source/source.json": "2737332c0b6399014e8cd7a20cd75b28ca90240854f4bc0f0dada6e67b251d36"
+      }
+    },
+    {
+      "label": "check_pruning",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "check_pruning.py"
+      ],
+      "started_utc": "2026-09-29T17:49:32.525688+00:00",
+      "before": {
+        "temperature_c": 43.329,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-29T17:49:37.026655+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 43.816,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      }
+    },
+    {
+      "label": "prune_models",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "prune_models.py",
+        "--baseline",
+        "results/source/checkpoint.pt",
+        "--output",
+        "results/pruned"
+      ],
+      "started_utc": "2026-09-29T17:49:37.039561+00:00",
+      "before": {
+        "temperature_c": 43.816,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/source/checkpoint.pt",
+      "input_sha256": "80598dd399626fec7af47e5c4bff0a82bcaae0809d4213f0ad6e0a34cda10e23",
+      "finished_utc": "2026-09-29T17:49:47.350133+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 44.303,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "80598dd399626fec7af47e5c4bff0a82bcaae0809d4213f0ad6e0a34cda10e23",
+      "output_sha256": {
+        "results/pruned/control/checkpoint.pt": "0962557e4206ca1cdbc045f65d52292801c5f646181bd400d008dac527b40d96",
+        "results/pruned/control/pruning.json": "462021a2ed936fa97de0849cd1b52d012a2073f950a58eb1bd9b5c2eb525d2da",
+        "results/pruned/s25/checkpoint.pt": "7e733d992b1cd4c7f03073a4068626a6b621177ba4c0937f42ac97ac338f8aa9",
+        "results/pruned/s25/pruning.json": "a2460e55ef5cd554c6f0b4cbe0582de7fbf331debf4c501bd2a43652ccb90539",
+        "results/pruned/s50/checkpoint.pt": "a2b9d50322aec0d43360341c30d3f9a0c89a16860b006152ee686db79c2cd4f7",
+        "results/pruned/s50/pruning.json": "03a924d80cb268b759a9e0a2ceace8608278d2047b7fe027b85325862cec483e"
+      }
+    },
+    {
+      "label": "finetune_control",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "finetune.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/pruned/control/checkpoint.pt",
+        "--output",
+        "results/control"
+      ],
+      "started_utc": "2026-09-29T17:49:47.369831+00:00",
+      "before": {
+        "temperature_c": 44.303,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/pruned/control/checkpoint.pt",
+      "input_sha256": "0962557e4206ca1cdbc045f65d52292801c5f646181bd400d008dac527b40d96",
+      "finished_utc": "2026-09-29T17:50:39.276732+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 45.277,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "0962557e4206ca1cdbc045f65d52292801c5f646181bd400d008dac527b40d96",
+      "output_sha256": {
+        "results/control/checkpoint.pt": "da5435154e5e663229acbae972ae0caa8c4364366e48b1aa38e3eb4e41ed531b",
+        "results/control/config.json": "9df9186b4daa547dac95eb9e700c180d75c6e73245bcde76a22300c47c08e101",
+        "results/control/training.csv": "7d86ff2f1e21191fdcdff45d1dcf622c68df1520741d6dbcd85b4a68c1d8b886",
+        "results/control/training_summary.json": "c9517b72cd9e4bdbf690392ec7d8e8ca693d83ab22f9a9d1efcf0097bab65449"
+      }
+    },
+    {
+      "label": "finetune_s25",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "finetune.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/pruned/s25/checkpoint.pt",
+        "--output",
+        "results/s25"
+      ],
+      "started_utc": "2026-09-29T17:50:39.293703+00:00",
+      "before": {
+        "temperature_c": 45.277,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/pruned/s25/checkpoint.pt",
+      "input_sha256": "7e733d992b1cd4c7f03073a4068626a6b621177ba4c0937f42ac97ac338f8aa9",
+      "finished_utc": "2026-09-29T17:51:27.564842+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 45.764,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "7e733d992b1cd4c7f03073a4068626a6b621177ba4c0937f42ac97ac338f8aa9",
+      "output_sha256": {
+        "results/s25/checkpoint.pt": "db1c93f77bd0ad5d24be90b56b3e0cc8abb9e7ad7a30105f7cc1e5fedd85a838",
+        "results/s25/config.json": "618e6a3f70547a2c26f2a33a665c26bc5f1436a3096ebf4faad093a2df6c39d7",
+        "results/s25/training.csv": "fe2be9631f97aedcb7be61b28dea08798dbef361cf7744f9a05e4ac04b07cf6b",
+        "results/s25/training_summary.json": "930f5945818af3493d807e00ae14d8945d2c7059fc956ac460392e85f96953a7"
+      }
+    },
+    {
+      "label": "finetune_s50",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "finetune.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/pruned/s50/checkpoint.pt",
+        "--output",
+        "results/s50"
+      ],
+      "started_utc": "2026-09-29T17:51:27.581381+00:00",
+      "before": {
+        "temperature_c": 46.251,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/pruned/s50/checkpoint.pt",
+      "input_sha256": "a2b9d50322aec0d43360341c30d3f9a0c89a16860b006152ee686db79c2cd4f7",
+      "finished_utc": "2026-09-29T17:52:13.922493+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 46.251,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "a2b9d50322aec0d43360341c30d3f9a0c89a16860b006152ee686db79c2cd4f7",
+      "output_sha256": {
+        "results/s50/checkpoint.pt": "55cc0d019bf82381b0e3e3c4155079ccdde798e7b7e33a61072302b8072ac080",
+        "results/s50/config.json": "a5f4ee990c40e013a299fdd0cf35f0ebe50152ed66571013dd54e49067515d51",
+        "results/s50/training.csv": "54709d563452a5dd0bb4e0846aec02dec44a9fa34fea2414419407cb831e90b1",
+        "results/s50/training_summary.json": "c375eb3237ae6b72238e3b4a2748482c1fe3f275152617371ca29b31f4933b72"
+      }
+    },
+    {
+      "label": "evaluate_control",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "evaluate.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/control/checkpoint.pt",
+        "--output",
+        "results/control/test"
+      ],
+      "started_utc": "2026-09-29T17:52:13.939441+00:00",
+      "before": {
+        "temperature_c": 46.251,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/control/checkpoint.pt",
+      "input_sha256": "da5435154e5e663229acbae972ae0caa8c4364366e48b1aa38e3eb4e41ed531b",
+      "finished_utc": "2026-09-29T17:52:26.507340+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 46.738,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "da5435154e5e663229acbae972ae0caa8c4364366e48b1aa38e3eb4e41ed531b",
+      "output_sha256": {
+        "results/control/test/evaluation.json": "84ea71cdf691b381b49cd0a32018af5cbeba761ad2b2e76a01fb2526accec3d0"
+      }
+    },
+    {
+      "label": "evaluate_s25",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "evaluate.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/s25/checkpoint.pt",
+        "--output",
+        "results/s25/test"
+      ],
+      "started_utc": "2026-09-29T17:52:26.522506+00:00",
+      "before": {
+        "temperature_c": 46.738,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/s25/checkpoint.pt",
+      "input_sha256": "db1c93f77bd0ad5d24be90b56b3e0cc8abb9e7ad7a30105f7cc1e5fedd85a838",
+      "finished_utc": "2026-09-29T17:52:39.182080+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 46.738,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "db1c93f77bd0ad5d24be90b56b3e0cc8abb9e7ad7a30105f7cc1e5fedd85a838",
+      "output_sha256": {
+        "results/s25/test/evaluation.json": "1f45e0e96ecfbdea53bc44b61f3f91425c8d86a532e5899a61cb48482024f6fe"
+      }
+    },
+    {
+      "label": "evaluate_s50",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "evaluate.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/s50/checkpoint.pt",
+        "--output",
+        "results/s50/test"
+      ],
+      "started_utc": "2026-09-29T17:52:39.199949+00:00",
+      "before": {
+        "temperature_c": 46.738,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/s50/checkpoint.pt",
+      "input_sha256": "55cc0d019bf82381b0e3e3c4155079ccdde798e7b7e33a61072302b8072ac080",
+      "finished_utc": "2026-09-29T17:52:51.737263+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 47.225,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "55cc0d019bf82381b0e3e3c4155079ccdde798e7b7e33a61072302b8072ac080",
+      "output_sha256": {
+        "results/s50/test/evaluation.json": "f7e6d89cfbd75775e49fe78c094ba6615534d99bec2e7a0f0c9dc4c4a33452a5"
+      }
+    },
+    {
+      "label": "benchmark_control",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "benchmark.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/control/checkpoint.pt",
+        "--threads",
+        "1",
+        "--warmup",
+        "10",
+        "--runs",
+        "100",
+        "--output",
+        "results/control/timing"
+      ],
+      "started_utc": "2026-09-29T17:53:51.811625+00:00",
+      "before": {
+        "temperature_c": 39.92,
+        "cpu_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/control/checkpoint.pt",
+      "input_sha256": "da5435154e5e663229acbae972ae0caa8c4364366e48b1aa38e3eb4e41ed531b",
+      "finished_utc": "2026-09-29T17:53:59.676585+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 42.842,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "da5435154e5e663229acbae972ae0caa8c4364366e48b1aa38e3eb4e41ed531b",
+      "output_sha256": {
+        "results/control/timing/raw_timings.csv": "662f0ad8e029cb6f797c977cc8244af801fbbdfa62b65eedc55598338f68124d",
+        "results/control/timing/summary.json": "92add1eec165b4a645d084520b64ac9cb8302f70d62b50f57f249a30a37c0b2d"
+      }
+    },
+    {
+      "label": "benchmark_s25",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "benchmark.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/s25/checkpoint.pt",
+        "--threads",
+        "1",
+        "--warmup",
+        "10",
+        "--runs",
+        "100",
+        "--output",
+        "results/s25/timing"
+      ],
+      "started_utc": "2026-09-29T17:54:29.699680+00:00",
+      "before": {
+        "temperature_c": 39.92,
+        "cpu_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/s25/checkpoint.pt",
+      "input_sha256": "db1c93f77bd0ad5d24be90b56b3e0cc8abb9e7ad7a30105f7cc1e5fedd85a838",
+      "finished_utc": "2026-09-29T17:54:37.560572+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 43.329,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "db1c93f77bd0ad5d24be90b56b3e0cc8abb9e7ad7a30105f7cc1e5fedd85a838",
+      "output_sha256": {
+        "results/s25/timing/raw_timings.csv": "94b65345e49806032308336dba7299e1a206b9a62dab7eedceb1a3626fb7e503",
+        "results/s25/timing/summary.json": "32885742234ccb1c0fc13538a74707b7b4a60f7caf9f0f1bd35520b0c86660c4"
+      }
+    },
+    {
+      "label": "benchmark_s50",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "benchmark.py",
+        "--checkpoint",
+        "/home/jingyi/CSE60685-FA26-Lab-3/results/s50/checkpoint.pt",
+        "--threads",
+        "1",
+        "--warmup",
+        "10",
+        "--runs",
+        "100",
+        "--output",
+        "results/s50/timing"
+      ],
+      "started_utc": "2026-09-29T17:54:52.583245+00:00",
+      "before": {
+        "temperature_c": 38.946,
+        "cpu_frequency_khz": 600000,
+        "throttled_hex": "0x0"
+      },
+      "input_checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/s50/checkpoint.pt",
+      "input_sha256": "55cc0d019bf82381b0e3e3c4155079ccdde798e7b7e33a61072302b8072ac080",
+      "finished_utc": "2026-09-29T17:55:00.415598+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 42.842,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "input_sha256_after": "55cc0d019bf82381b0e3e3c4155079ccdde798e7b7e33a61072302b8072ac080",
+      "output_sha256": {
+        "results/s50/timing/raw_timings.csv": "5bf6291eac0bb1152f90aa57410ed85e2afa7a57fabaecd15c2f58eb026fcba2",
+        "results/s50/timing/summary.json": "47da0abd1ec71835435ce9c929d9a99dbc47540bb8e337e69f251a81285e5520"
+      }
+    },
+    {
+      "label": "comparison",
+      "command": [
+        "/home/jingyi/CSE60685-FA26-Lab-3/env/bin/python",
+        "summarize.py",
+        "--results",
+        "results",
+        "--output",
+        "results/comparison"
+      ],
+      "started_utc": "2026-09-29T17:55:00.430496+00:00",
+      "before": {
+        "temperature_c": 42.842,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "finished_utc": "2026-09-29T17:55:04.931603+00:00",
+      "exit_code": 0,
+      "after": {
+        "temperature_c": 42.842,
+        "cpu_frequency_khz": 1800000,
+        "throttled_hex": "0x0"
+      },
+      "output_sha256": {
+        "results/comparison/comparison.csv": "f40efcfdfc19b610d8f374a9599a674ba627495beab358d710c7ab1548325262",
+        "results/comparison/comparison.json": "a7100df83e592586b4f8d5c0ca3f3871d176a0784ec1ff19ba1a9c7f3ae11a7d",
+        "results/comparison/report_table.md": "c91ecf2b08cbdd68e368f60a75676d6a87a31a0f795d921f4ccab2387a3585e6"
+      }
+    }
+  ],
+  "started_utc": "2026-09-29T17:49:24.062235+00:00",
+  "instructor_commit": "4c635083c39862381940db06d134bfe95ce92088",
+  "instructor_file_sha256": {
+    ".gitattributes": "b007b3506ff9a8579d17289d011e5cb34964c9bc4f216f3d9e4f5c4922c810fb",
+    ".gitignore": "00f269073c0210e3459b6fc1325457c9578a3d88371711766458339c2aca17c3",
+    "NOTICE.md": "bcff4bbd81858be986c61fdcfbc0c9e652d38531c544c10f65975e4ebff88ea1",
+    "README.md": "2e11193de50eb0bca4cd82b564e37fb9092242673036252d59ae1bc057b335df",
+    "assets/data_manifest.json": "7570408dfee1541f3c8c45e58403679757c380d90cbc6cdc4efcc002efc7fee0",
+    "assets/fallback_baseline.pt": "5aa2f95436f08d34ea76b62aee340fcce195510805bc0d7a1bc38bbc4fa907a2",
+    "assets/split.json": "76639088a470fa016cf664fd363011d614d972605c8c43cbebd70bbc3594f443",
+    "benchmark.py": "2cabbc0955a290e9556d945a93dd9414003085f77aba3b976aca2563f861a8fc",
+    "check_environment.py": "41d6d807e07370f10b84639815d0cd93611154d21b6999743e349da458ebfc55",
+    "check_pruning.py": "07e68eefccd24bb8850e8440ba008fdb19f8499a176d59967398f15793b53c1b",
+    "common.py": "1e55ea2d4472645f3f83720f028488623460f29afc9ef5e36e25509b531f69a0",
+    "course_config.json": "01135a0e977334a45b7e37eb475ccfa7dbefd730d298f7f65df0a33664a3ec3b",
+    "data.py": "0ac3d4acbbd559bd661f503111f350604220c0429cdc92a5d47141c24f002393",
+    "evaluate.py": "4e4182fda5cb6c8da2c985511c643ccbd1d3b545fa834948609bcc7cf35b5252",
+    "finetune.py": "a1e7e20ea9a2c3670d89d6eb6eed83fdeb4f4b6bba22ab9284c340a7def59ef6",
+    "import_baseline.py": "6819b1355b7cfb53ba5d7046e37bd2f08190b093539453239e411ae68990b3c6",
+    "inspect_model.py": "1ac2063338f48dedcfa7c1d6acf77a9226176612574f27e5fa3fe111cd384e02",
+    "models.py": "238a414c9db6b3148c4e734af6681b2a00b3610fb25a20abbecf1a613a1ae2bf",
+    "prepare_data.py": "2a25921243d1d11a1d80e489e6ba7b1bd2dd6fcd5ef16f1fcd6bcd4814ca1809",
+    "prune_models.py": "67d666d1d6f21a9f3ecf33a54dae4058e07f873d4265a746477b1a41b5d7b980",
+    "pruning.py": "8d5c0a97ca14db36524c6144e26cf541ec0c1f0f303a0bac92c1965f5ca65101",
+    "pruning_ops.py": "7786562e17d4665ef97d5502b5ded35042ca8313dfdf1065609b85fcb84ade54",
+    "requirements.txt": "9e56ec73e6fb461343f823bd70eb0c3f06d98129891efcfe53cf91ee3ea313d4",
+    "summarize.py": "17d06affafc47a9532fd466c984469f54467e692ec43d9ec68e63f1388ec18f1"
+  },
+  "controller_environment": {
+    "timestamp_utc": "2026-09-29T17:49:24.070333+00:00",
+    "python": "3.13.5",
+    "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.2.6",
+    "threads": 4,
+    "interop_threads": 4,
+    "execution_device": "cpu"
+  },
+  "governor": "ondemand",
+  "all_finetuning_completed_utc": "2026-09-29T17:52:13.928855+00:00",
+  "all_evaluation_completed_utc": "2026-09-29T17:52:51.751301+00:00",
+  "required_experiments_completed_utc": "2026-09-29T17:55:04.936115+00:00",
+  "instructor_file_sha256_after": {
+    ".gitattributes": "b007b3506ff9a8579d17289d011e5cb34964c9bc4f216f3d9e4f5c4922c810fb",
+    ".gitignore": "00f269073c0210e3459b6fc1325457c9578a3d88371711766458339c2aca17c3",
+    "NOTICE.md": "bcff4bbd81858be986c61fdcfbc0c9e652d38531c544c10f65975e4ebff88ea1",
+    "README.md": "2e11193de50eb0bca4cd82b564e37fb9092242673036252d59ae1bc057b335df",
+    "assets/data_manifest.json": "7570408dfee1541f3c8c45e58403679757c380d90cbc6cdc4efcc002efc7fee0",
+    "assets/fallback_baseline.pt": "5aa2f95436f08d34ea76b62aee340fcce195510805bc0d7a1bc38bbc4fa907a2",
+    "assets/split.json": "76639088a470fa016cf664fd363011d614d972605c8c43cbebd70bbc3594f443",
+    "benchmark.py": "2cabbc0955a290e9556d945a93dd9414003085f77aba3b976aca2563f861a8fc",
+    "check_environment.py": "41d6d807e07370f10b84639815d0cd93611154d21b6999743e349da458ebfc55",
+    "check_pruning.py": "07e68eefccd24bb8850e8440ba008fdb19f8499a176d59967398f15793b53c1b",
+    "common.py": "1e55ea2d4472645f3f83720f028488623460f29afc9ef5e36e25509b531f69a0",
+    "course_config.json": "01135a0e977334a45b7e37eb475ccfa7dbefd730d298f7f65df0a33664a3ec3b",
+    "data.py": "0ac3d4acbbd559bd661f503111f350604220c0429cdc92a5d47141c24f002393",
+    "evaluate.py": "4e4182fda5cb6c8da2c985511c643ccbd1d3b545fa834948609bcc7cf35b5252",
+    "finetune.py": "a1e7e20ea9a2c3670d89d6eb6eed83fdeb4f4b6bba22ab9284c340a7def59ef6",
+    "import_baseline.py": "6819b1355b7cfb53ba5d7046e37bd2f08190b093539453239e411ae68990b3c6",
+    "inspect_model.py": "1ac2063338f48dedcfa7c1d6acf77a9226176612574f27e5fa3fe111cd384e02",
+    "models.py": "238a414c9db6b3148c4e734af6681b2a00b3610fb25a20abbecf1a613a1ae2bf",
+    "prepare_data.py": "2a25921243d1d11a1d80e489e6ba7b1bd2dd6fcd5ef16f1fcd6bcd4814ca1809",
+    "prune_models.py": "67d666d1d6f21a9f3ecf33a54dae4058e07f873d4265a746477b1a41b5d7b980",
+    "pruning.py": "8d5c0a97ca14db36524c6144e26cf541ec0c1f0f303a0bac92c1965f5ca65101",
+    "pruning_ops.py": "7786562e17d4665ef97d5502b5ded35042ca8313dfdf1065609b85fcb84ade54",
+    "requirements.txt": "9e56ec73e6fb461343f823bd70eb0c3f06d98129891efcfe53cf91ee3ea313d4",
+    "summarize.py": "17d06affafc47a9532fd466c984469f54467e692ec43d9ec68e63f1388ec18f1"
+  }
+}

@@ -1,0 +1,7 @@
+2026-09-29T18:06:44+00:00
+All benchmark results already exist. Change Wi-Fi power saving for post-experiment connection reliability only.
+Previous profile setting:
+default
+Power save: off
+disable
+To reverse: nmcli connection modify the same profile 802-11-wireless.powersave 0, and iw dev wlan0 set power_save on.

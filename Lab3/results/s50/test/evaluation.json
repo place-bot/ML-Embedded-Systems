@@ -1,0 +1,23 @@
+{
+  "model_name": "s50",
+  "checkpoint": "/home/jingyi/CSE60685-FA26-Lab-3/results/s50/checkpoint.pt",
+  "reload_verified": true,
+  "reload_max_abs_error": 0.0,
+  "validation_accuracy_pct": 81.4,
+  "environment": {
+    "timestamp_utc": "2026-09-29T17:52:46.283354+00:00",
+    "python": "3.13.5",
+    "system": "Linux-6.18.34+rpt-rpi-v8-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.5",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.2.6",
+    "threads": 1,
+    "interop_threads": 1,
+    "execution_device": "cpu"
+  },
+  "test_accuracy_pct": 81.0,
+  "test_correct": 8100,
+  "test_count": 10000,
+  "test_mean_loss": 0.5166369300365448
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "report_pages": 2,
+  "analysis_pages": 1,
+  "ai_appendix_pages": 1,
+  "ai_appendix_words": 116,
+  "pdf_sha256": "8f47dca1d25c43a857330e43e7bbbb0609487b985b37ed81b9565553490c3c3f",
+  "repository_manifest_files_verified": 90,
+  "original_experiment_files_byte_identical": true,
+  "report_numbers_and_choice_verified": true,
+  "visual_review": "Both rendered pages inspected; no clipping, overlap or missing glyphs.",
+  "pi_shutdown_command_succeeded": true,
+  "student_confirmed_green_led_stopped": true,
+  "credential_pattern_scan": "PASS",
+  "canvas_action": "Prepared for student upload; not submitted by the assistant."
+}
