@@ -1,0 +1,65 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setmonofont{Consolas}[Scale=0.85]
+\usepackage{graphicx,booktabs,array,amsmath}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\topic}[1]{\par\smallskip\textbf{#1}\par\nopagebreak}
+\begin{document}
+\begin{center}
+{\Large\bfseries Lab 4 Report}\\[3pt]
+CSE 60685 Machine Learning for Embedded Systems\\[2pt]
+Physical Adversarial Patches for YOLOv2
+\end{center}
+
+\textbf{Training and source.} The patch source was \textbf{trained}, using the instructor's unchanged Colab notebook and frozen YOLOv2 detector. Training on a \textbf{Tesla T4} completed \textbf{5,642 updates in 900.03 s}, reaching the default 15-minute limit before 6,000 updates. Settings were a $300\times300$ RGB patch, 64 supplied INRIA training images, batch 4, learning rate 0.03 and seed 42. Both patterns were assembled from four color-printed tiles, for a nominal $40\times40$ cm size.
+
+\textbf{Physical evaluation.} The supplied \textbf{Raspberry Pi 4B Rev.\ 1.5} ran the unchanged camera demo with OpenCV 4.12.0, an OV5647 camera and two CPU threads. Camera frames were $640\times480$; detector input was $416\times416$. The threshold was \textbf{0.40}. Scores below are the maximum objectness among predictions whose top class is \emph{person}, not classification accuracy. All four observations came from the actual Pi camera.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.13}
+\begin{tabular}{@{}lccp{3.60in}@{}}
+\toprule
+Condition & Person detected & Max objectness & Patch setting in the saved frame\\
+\midrule
+Clean & Yes & 0.858 & No held patch; leaning toward the camera.\\
+Random & Yes & 0.615 & Random patch held high, covering face and upper torso.\\
+Learned & Yes & 0.862 & Trained patch held lower on torso; face visible.\\
+Explore & Yes & 0.709 & Trained patch turning; visible motion blur.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.89\textwidth]{../artifacts/camera-20261008-135913/evidence.jpg}
+\end{center}
+{\small\textbf{Figure 1.} Original four-panel \texttt{evidence.jpg} exported by the instructor demo. The photographs and detection boxes are unchanged. The table uses the corresponding final rows of \texttt{comparison.csv}.}
+
+\newpage
+\topic{1. Learned patch, random control and the training objective}
+The Learned score (0.862) is almost identical to Clean (0.858), with an unrounded increase of 0.0038. Random is lower than Clean by 0.2433, but all four saved frames still contain a person detection above 0.40. Thus, this trial does \textbf{not show a clear suppression benefit from the trained patch}. Training alone is not evidence that a patch will work in a physical scene, and a lower score is not the same as making the person undetected.
+
+In \texttt{patch\_loss}, the detection term is the batch mean of the maximum sigmoid objectness over the detector's anchors and grid locations. The patch is optimized to reduce this term while the detector weights remain fixed. Non-printability and total-variation penalties constrain printable colors and spatial roughness:
+\[
+L = \operatorname{mean}_{\rm batch}\!\left(\max_{\rm anchors,\,grid}\sigma(o)\right)
+    +0.01L_{\rm NPS}+\max(2.5L_{\rm TV},0.1).
+\]
+This training maximum is not restricted to predictions whose top class is person; the displayed evaluation score is. The supplied placement function median-filters the patch, transforms it onto labeled people, and varies brightness, contrast, noise and rotation during training. These transformations encourage robustness but do not guarantee transfer to this camera view, pose or printed surface.
+
+The Random patch is a control for holding a large printed pattern in front of the person without adversarial optimization. A matched comparison would use the same location, scale, pose and lighting. In these captures, Random covers the face and is higher than Learned; the person is also close to the camera and leaning toward the controls. Consequently, the lower Random score cannot be attributed solely to its pattern, and these images cannot establish that random patterns generally outperform trained ones. The results are individual observations, not repeated-trial estimates.
+
+\topic{2. Explore: turning, motion blur and Pi processing limits}
+The recorded Explore change was \emph{``turn slightly.''} The saved frame shows the learned print turned while moving, with substantial motion blur and a changed placement. Blur is therefore an observed part of this exploratory condition. Objectness decreased from 0.862 to 0.709, a difference of 0.1522, but the person remained detected. Because the image includes both turning and blur, with imperfect position control, this does not isolate the effect of angle or blur alone.
+
+Position determines which body features are covered; distance changes the patch's pixel size in the detector input; angle changes its projected shape. Motion blur can additionally remove fine texture. Each can change how the printed pattern appears to the detector. This experiment documents that sensitivity without identifying a unique cause for the Explore score change.
+
+The four saved observations took \textbf{1.82--2.00 s per inference} and displayed \textbf{0.50--0.54 updates/s}. The camera was configured for 5 frames/s, so inference and the surrounding processing pipeline limited the detection display to roughly one update every two seconds. This slow update rate also makes it easy to save a transitional frame when moving the paper; it is distinct from the optical motion blur visible within the Explore image.
+
+\topic{AI Attribution Appendix}
+{\small OpenAI Codex assisted with interpreting the lab, running the unchanged training/setup workflow, troubleshooting, printing, checking exported evidence, explaining results and preparing this English LaTeX report. Main requests were to follow the Tutorial and Assignment, help complete the experiment, and prepare the report. I handled the hardware and prints, captured and downloaded the final four conditions, and chose to retain the exploratory motion-blurred observation. All reported measurements and photographs are original Pi records.}
+\end{document}

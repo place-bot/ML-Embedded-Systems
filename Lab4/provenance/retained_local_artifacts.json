@@ -1,0 +1,18 @@
+{
+  "lab4-results.zip": {
+    "sha256": "6b350c273f6b2dd69be86b99d811dfd9315b02db49bcec60c22e385e1b82c712",
+    "bytes": 1191785
+  },
+  "lab4-patch.zip": {
+    "sha256": "b8241331ab87da4af75175880682bd4dcfc5ca0103365af1b4b280de6aa602bd",
+    "bytes": 25171097
+  },
+  "Lab4_Report.pdf": {
+    "sha256": "7e39991c73a34fe02e4bf91030761f86d335f523a0a9b5fc63da4e294a7c4b7f",
+    "bytes": 405377
+  },
+  "evidence.jpg": {
+    "sha256": "72ad5664f0ad8f09077370536096697a16f7340bb30f0cbaea9fd08fd1026924",
+    "bytes": 303580
+  }
+}

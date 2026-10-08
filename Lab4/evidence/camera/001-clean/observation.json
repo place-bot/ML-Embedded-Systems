@@ -1,0 +1,26 @@
+{
+  "condition": "Clean",
+  "frame_id": 874,
+  "note": "",
+  "captured_unix": 1791481840.2977698,
+  "saved_unix": 1791481842.7700732,
+  "inference_ms": 1826.730949000023,
+  "update_fps": 0.542402164747867,
+  "folder": "001-clean",
+  "source": "camera",
+  "patch_source": "trained",
+  "max_person_score": 0.783663809299469,
+  "person_detected": true,
+  "detections": [
+    {
+      "label": "person",
+      "confidence": 0.783663809299469,
+      "xyxy": [
+        394.6258339515099,
+        25.120699955866925,
+        634.0147077120267,
+        457.3809726421649
+      ]
+    }
+  ]
+}

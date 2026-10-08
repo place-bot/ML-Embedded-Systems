@@ -1,0 +1,17 @@
+{
+  "model": "YOLOv2 COCO",
+  "image_size": 416,
+  "confidence": 0.4,
+  "nms_iou": 0.4,
+  "score": "objectness for boxes whose top class is person",
+  "threads": 2,
+  "seed": 42,
+  "patch_pixels": 300,
+  "batch_size": 4,
+  "steps": 6000,
+  "learning_rate": 0.03,
+  "camera_width": 640,
+  "camera_height": 480,
+  "camera_fps": 5,
+  "frame_max_age": 10
+}

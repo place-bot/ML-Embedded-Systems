@@ -1,5 +1,18 @@
 # CSE 60685 - Machine Learning for Embedded Systems
 
+## Lab 4: physical adversarial patches on the Raspberry Pi
+
+The unchanged instructor notebook trained a patch against frozen YOLOv2 on a Tesla T4 for 5,642 updates in 900.03 seconds. The student then captured Clean, Random, Learned and Explore with the actual Pi camera. [Lab 4 evidence and reproduction notes](Lab4/EVIDENCE.md) link the original code, trained patch images, full training CSV, camera JSON/CSV and [LaTeX source](Lab4/report/Lab4_Report.tex).
+
+| Condition | Person detected | Max person objectness |
+| --- | --- | ---: |
+| Clean | Yes | 0.857889 |
+| Random | Yes | 0.614605 |
+| Learned | Yes | 0.861669 |
+| Explore | Yes | 0.709441 |
+
+These observations do not show clear suppression by the trained patch. Random and Learned were held at different heights; Explore includes turning, motion blur and placement changes. These limitations are documented rather than treated as a controlled single-factor comparison. **Canvas takes the two-page `Lab4_Report.pdf`, retained locally together with the original camera ZIP and photographs.** Personal camera images and the illustrated PDF are not published here; their checksums are retained for verification.
+
 ## Lab 3: structured pruning and fine-tuning on the Raspberry Pi
 
 The required Control, S25 and S50 branches completed fine-tuning, full test-set evaluation and inference measurements on the supplied Pi 4B. All instructor code remains unchanged. The source is the student's own verified five-epoch Lab 2 A checkpoint; every branch, including Control, received three additional training epochs. [Lab 3 evidence and reproduction notes](Lab3/EVIDENCE.md) map each requirement to the retained checkpoints, original JSON/CSV and logs. **Canvas submission: [Lab3_Report.pdf](Lab3/results/Lab3_Report.pdf)**, containing one page of analysis and a concise AI Attribution Appendix. [LaTeX source](Lab3/report/Lab3_Report.tex) is retained.

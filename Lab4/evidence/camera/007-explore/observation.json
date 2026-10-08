@@ -1,0 +1,26 @@
+{
+  "condition": "Explore",
+  "frame_id": 3357,
+  "note": "turn slightly",
+  "captured_unix": 1791482344.641146,
+  "saved_unix": 1791482348.0738964,
+  "inference_ms": 1820.9741539999413,
+  "update_fps": 0.5440407087817766,
+  "folder": "007-explore",
+  "source": "camera",
+  "patch_source": "trained",
+  "max_person_score": 0.8232294321060181,
+  "person_detected": true,
+  "detections": [
+    {
+      "label": "person",
+      "confidence": 0.8232294321060181,
+      "xyxy": [
+        228.59662569486176,
+        0,
+        640,
+        415.1086220374474
+      ]
+    }
+  ]
+}

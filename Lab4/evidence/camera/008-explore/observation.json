@@ -1,0 +1,26 @@
+{
+  "condition": "Explore",
+  "frame_id": 3366,
+  "note": "turn slightly",
+  "captured_unix": 1791482346.4407606,
+  "saved_unix": 1791482350.0960906,
+  "inference_ms": 1996.8656539999756,
+  "update_fps": 0.4964524274074133,
+  "folder": "008-explore",
+  "source": "camera",
+  "patch_source": "trained",
+  "max_person_score": 0.7094414830207825,
+  "person_detected": true,
+  "detections": [
+    {
+      "label": "person",
+      "confidence": 0.7094414830207825,
+      "xyxy": [
+        216.86516981858472,
+        0,
+        639.9060352032001,
+        456.040993470412
+      ]
+    }
+  ]
+}

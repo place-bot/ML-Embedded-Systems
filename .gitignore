@@ -7,3 +7,10 @@ __pycache__/
 *.toc
 *.synctex.gz
 Lab1/report/*.log
+# Lab 4 personal camera media and the illustrated report are retained locally.
+Lab4/artifacts/
+Lab4/downloads/
+Lab4/private/
+Lab4/output/
+Lab4/report/*.pdf
+Lab4/report/*.log

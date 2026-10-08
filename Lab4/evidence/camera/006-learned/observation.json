@@ -1,0 +1,26 @@
+{
+  "condition": "Learned",
+  "frame_id": 3094,
+  "note": "",
+  "captured_unix": 1791482292.0477374,
+  "saved_unix": 1791482295.226458,
+  "inference_ms": 1913.0166449999706,
+  "update_fps": 0.5181367078387453,
+  "folder": "006-learned",
+  "source": "camera",
+  "patch_source": "trained",
+  "max_person_score": 0.8616691827774048,
+  "person_detected": true,
+  "detections": [
+    {
+      "label": "person",
+      "confidence": 0.8616691827774048,
+      "xyxy": [
+        220.60195629413312,
+        13.353682297926682,
+        625.2156037550706,
+        467.77582021859973
+      ]
+    }
+  ]
+}

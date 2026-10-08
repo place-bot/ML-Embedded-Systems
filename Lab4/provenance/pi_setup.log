@@ -1,0 +1,30 @@
+Cloning into '/home/jingyi/CSE60685-FA26-Lab-4'...
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting numpy==2.2.6 (from -r requirements.txt (line 1))
+  Using cached numpy-2.2.6-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (63 kB)
+Collecting Pillow==11.3.0 (from -r requirements.txt (line 2))
+  Downloading pillow-11.3.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (9.0 kB)
+Collecting opencv-python-headless==4.12.0.88 (from -r requirements.txt (line 3))
+  Downloading opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (19 kB)
+Using cached numpy-2.2.6-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.0 MB)
+Downloading pillow-11.3.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 2.0 MB/s eta 0:00:00
+Downloading opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (33.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.1/33.1 MB 2.5 MB/s eta 0:00:00
+Installing collected packages: Pillow, numpy, opencv-python-headless
+
+Successfully installed Pillow-11.3.0 numpy-2.2.6 opencv-python-headless-4.12.0.88
+Downloading YOLOv2 weights (204 MB)...
+Weights and teaching images verified.
+Python 3.13.5 OpenCV 4.12.0 NumPy 2.2.6 Pillow 11.3.0
+rpicam-vid: /usr/bin/rpicam-vid
+YOLOv2 weights loaded.
+Available cameras
+-----------------
+0 : ov5647 [2592x1944 10-bit GBRG] (/base/soc/i2c0mux/i2c@1/ov5647@36)
+    Modes: 'SGBRG10_CSI2P' : 640x480 [62.50 fps - (16, 0)/2560x1920 crop]
+                             1296x972 [46.34 fps - (0, 0)/2592x1944 crop]
+                             1920x1080 [32.81 fps - (348, 434)/1928x1080 crop]
+                             2592x1944 [15.63 fps - (0, 0)/2592x1944 crop]
+
+LAB4_SETUP_COMPLETE

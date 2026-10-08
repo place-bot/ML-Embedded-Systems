@@ -1,0 +1,5 @@
+condition,person_detected,max_person_score,inference_ms,update_fps,note,patch_source,source,folder
+Clean,True,0.8578886985778809,1817.8590649999933,0.5449753629853918,,trained,camera,002-clean
+Random,True,0.6146047711372375,1881.4509080000335,0.5267828448478307,,trained,camera,003-random
+Learned,True,0.8616691827774048,1913.0166449999706,0.5181367078387453,,trained,camera,006-learned
+Explore,True,0.7094414830207825,1996.8656539999756,0.4964524274074133,turn slightly,trained,camera,008-explore

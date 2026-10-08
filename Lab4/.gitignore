@@ -1,0 +1,8 @@
+env/
+data/
+results/
+__pycache__/
+*.pyc
+.cache/
+.ipynb_checkpoints/
+lab4-patch.zip

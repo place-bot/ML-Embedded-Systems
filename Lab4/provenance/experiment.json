@@ -1,0 +1,32 @@
+{
+  "upstream": "https://github.com/guoyb17/CSE60685-FA26-Lab-4",
+  "upstream_commit": "5f27af02b15018e8ba98467f466023c014d8e5db",
+  "unchanged_instructor_files": 192,
+  "pi_model": "Raspberry Pi 4 Model B Rev. 1.5",
+  "os": "Raspberry Pi OS 64-bit / Debian 13.5",
+  "python": "3.13.5",
+  "opencv": "4.12.0",
+  "camera": "OV5647",
+  "cpu_threads": 2,
+  "camera_source": "physical Pi camera; unchanged live_demo.py",
+  "training_device": "Tesla T4",
+  "training_updates": 5642,
+  "training_elapsed_seconds": 900.030637021,
+  "patch_source": "trained",
+  "camera_zip_sha256": "6b350c273f6b2dd69be86b99d811dfd9315b02db49bcec60c22e385e1b82c712",
+  "patch_zip_sha256": "b8241331ab87da4af75175880682bd4dcfc5ca0103365af1b4b280de6aa602bd",
+  "selected_observations": [
+    "002-clean",
+    "003-random",
+    "006-learned",
+    "008-explore"
+  ],
+  "physical_limitations": [
+    "Random is higher and covers the face; Learned is lower on the torso.",
+    "Explore captures a turn with motion blur and a changed placement; angle is not isolated.",
+    "The student chose to retain these observations without reshooting."
+  ],
+  "excluded_capture": "001-clean contains a patch and is not the selected Clean observation.",
+  "shutdown": "Student confirmed switching off power; orderly OS shutdown was not verified for this capture session.",
+  "canvas_submission": "report prepared locally; not submitted by the assistant"
+}

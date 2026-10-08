@@ -1,0 +1,13 @@
+Installed trained patch in /home/jingyi/CSE60685-FA26-Lab-4/results/patch
+Python 3.13.5 OpenCV 4.12.0 NumPy 2.2.6 Pillow 11.3.0
+rpicam-vid: /usr/bin/rpicam-vid
+YOLOv2 weights loaded.
+PI_PATCH_ZIP_SHA256=b8241331ab87da4af75175880682bd4dcfc5ca0103365af1b4b280de6aa602bd
+{
+  "patch_source": "trained",
+  "device": "Tesla T4",
+  "steps": 5642,
+  "elapsed_seconds": 900.030637021,
+  "model_unchanged": true
+}
+LAB4_TRAINED_PATCH_INSTALLED

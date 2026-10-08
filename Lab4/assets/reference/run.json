@@ -1,0 +1,10 @@
+{
+  "patch_source": "reference",
+  "model": "YOLOv2 COCO",
+  "weights_sha256": "d9945162ed6f54ce1a901e3ec537bdba4d572ecae7873087bd730e5a7942df3f",
+  "patch_sha256": "48c0b390fe1c61ee0dad1171bcf27a5ba9f491ebb1c1f802b84b9d4cf3afd675",
+  "random_sha256": "e5ec6742584f40ecf78a4295833de29378835ffb59bbcf5a7eab9f3d0610c875",
+  "source": "https://gitlab.com/EAVISE/adversarial-yolo/-/blob/0665939cc733ade7289b2281dad80a89c6e0a2fe/patches/object_score.png",
+  "steps": null,
+  "note": "Published patch with an independently generated Random control."
+}

@@ -1,0 +1,1373 @@
+{
+  "source": "ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar",
+  "archive_sha256": "b99619542bb686958364b4acdc9b3c9ace8ad49fa5ed21ab8830a367a37debf7",
+  "preprocessing": "Pad original RGB image to a square with 127, then resize to 416x416 using PIL bilinear; labels follow the same geometry.",
+  "train": [
+    "train-person_and_bike_147.png",
+    "train-person_295.png",
+    "train-crop001089.png",
+    "train-crop001671.png",
+    "train-crop001610.png",
+    "train-crop001649.png",
+    "train-crop001529.png",
+    "train-crop001582.png",
+    "train-person_130.png",
+    "train-crop001222.png",
+    "train-crop001680.png",
+    "train-person_177.png",
+    "train-crop001646.png",
+    "train-crop001003.png",
+    "train-crop001550.png",
+    "train-crop001632.png",
+    "train-crop001050.png",
+    "train-crop001648.png",
+    "train-person_199.png",
+    "train-person_050.png",
+    "train-crop001263.png",
+    "train-crop001201.png",
+    "train-crop001059.png",
+    "train-crop001016.png",
+    "train-crop001051.png",
+    "train-crop001580.png",
+    "train-crop001079.png",
+    "train-person_139.png",
+    "train-crop001665.png",
+    "train-crop001133.png",
+    "train-crop001054.png",
+    "train-person_131.png",
+    "train-crop001612.png",
+    "train-crop001138.png",
+    "train-crop001127.png",
+    "train-crop001206.png",
+    "train-crop001561.png",
+    "train-person_and_bike_146.png",
+    "train-person_329.png",
+    "train-crop001236.png",
+    "train-person_273.png",
+    "train-crop001022.png",
+    "train-crop001144.png",
+    "train-crop001584.png",
+    "train-crop001832.png",
+    "train-crop001038.png",
+    "train-crop001246.png",
+    "train-person_142.png",
+    "train-person_114.png",
+    "train-crop001568.png",
+    "train-person_211.png",
+    "train-person_and_bike_134.png",
+    "train-person_319.png",
+    "train-crop001270.png",
+    "train-crop001823.png",
+    "train-person_and_bike_002.png",
+    "train-person_349.png",
+    "train-crop001806.png",
+    "train-person_and_bike_155.png",
+    "train-crop001519.png",
+    "train-crop001553.png",
+    "train-crop001137.png",
+    "train-crop001042.png",
+    "train-person_225.png"
+  ],
+  "preview": [
+    "test-person_099.png",
+    "test-person_and_bike_102.png",
+    "test-person_248.png",
+    "test-person_and_bike_038.png",
+    "test-crop_000005.png",
+    "test-crop001653.png",
+    "test-person_135.png",
+    "test-person_and_bike_054.png",
+    "test-person_and_bike_048.png",
+    "test-person_317.png",
+    "test-person_and_bike_058.png",
+    "test-person_093.png",
+    "test-crop001723.png",
+    "test-person_and_bike_104.png",
+    "test-person_and_bike_066.png",
+    "test-person_053.png"
+  ],
+  "files": [
+    {
+      "path": "assets/inria/images/train-person_and_bike_147.png",
+      "sha256": "be9fa6de70eef97caf3b1ffa6b4f92f95efd11b3e1ffdf3bee29170e8feb8006"
+    },
+    {
+      "path": "assets/inria/labels/train-person_and_bike_147.txt",
+      "sha256": "0ed6808d1519c1795289320130f2c2d29a6a3f9ab8baaa8ac43b81481c00ce3d"
+    },
+    {
+      "path": "assets/inria/images/train-person_295.png",
+      "sha256": "432788506270045c7cef2336a8f83398785f640520e444113db11d77eac9194b"
+    },
+    {
+      "path": "assets/inria/labels/train-person_295.txt",
+      "sha256": "68fe70ee135342ff1a246c6b618a28308d6e700b07c6c580e35934d318eedce1"
+    },
+    {
+      "path": "assets/inria/images/train-crop001089.png",
+      "sha256": "ba61dee3da564ed20c6ea3456a3f858ba318e168714856d4a2d88bd85c842d51"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001089.txt",
+      "sha256": "d5f7e349b872e628e5651cd2d34c0f172c56e339dba41eb2d5d602e0f9e662d5"
+    },
+    {
+      "path": "assets/inria/images/train-crop001671.png",
+      "sha256": "7f007a4c00b57136c6c01383723e665e643fcffd13b87c96e3acb6c7a03e4548"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001671.txt",
+      "sha256": "1ffce46476cb81c8ec036b46d42f9fbb4297bca73552c748dda2f2f7d45c6fff"
+    },
+    {
+      "path": "assets/inria/images/train-crop001610.png",
+      "sha256": "4988f24c14b9bd3ccf9d4043cdfe4c5ecc9d0d5bca78c88f8a9f0a9f86470732"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001610.txt",
+      "sha256": "b86cf2d2a8bc241e7c23a157d6423e8374d5ed97eee1819c4584cdac610f47b6"
+    },
+    {
+      "path": "assets/inria/images/train-crop001649.png",
+      "sha256": "97302af12e22c533df4c430a2cec7c093cfda4bf644e40874205599502112f57"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001649.txt",
+      "sha256": "9f211bbeca88f79b7533085382569d850610b5a922a9f52e2dcc90b66ed8652d"
+    },
+    {
+      "path": "assets/inria/images/train-crop001529.png",
+      "sha256": "d9b0db1e3deeea32bda1706c485b6cb46842a01cb6819cb1cc5544eea75a79d9"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001529.txt",
+      "sha256": "91ca11ae8954472a9c8396750534856ae520a47c624546087a77b00d27de5cc9"
+    },
+    {
+      "path": "assets/inria/images/train-crop001582.png",
+      "sha256": "8875a07b93e53ff41985cd2e037a943c4f4a219a10769976153e52096a815fc8"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001582.txt",
+      "sha256": "b8cef1838e0e81106c2a881d96a17b7b7a37b9efaf3fcf54c6319fdcb58a6934"
+    },
+    {
+      "path": "assets/inria/images/train-person_130.png",
+      "sha256": "162623b3274e0faca1726780a8d51c230e9501b53b4181f30f13d19da62a77d1"
+    },
+    {
+      "path": "assets/inria/labels/train-person_130.txt",
+      "sha256": "06daea62ebb9adb1336c447d9c291f274d7250d2e274a49c84c8f9e954a554d2"
+    },
+    {
+      "path": "assets/inria/images/train-crop001222.png",
+      "sha256": "e6c7b511e2e3c727b2d1f920a4b3e95481b68637d3aced0de1d85ca01695558b"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001222.txt",
+      "sha256": "10df6aa8cc905ae927b32b94ec52cf5938f1698304e9b8ce1a836dd0cf647df1"
+    },
+    {
+      "path": "assets/inria/images/train-crop001680.png",
+      "sha256": "90aed22df4496e8254406e82682bcd59425cded41469d64cb693a1abef5f03c9"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001680.txt",
+      "sha256": "13a34f6071b25550548967a3c62909a37c868a755ee155278bc5c3c6fbe4a17d"
+    },
+    {
+      "path": "assets/inria/images/train-person_177.png",
+      "sha256": "688ef2816335c62b34095d3e4116b947ce6f714fb591aac2298d4c3f5b2710f2"
+    },
+    {
+      "path": "assets/inria/labels/train-person_177.txt",
+      "sha256": "cea9d26e7f1722a21329687e70fd3f12e96b7ee779ac62098afb22f8a9d83a1b"
+    },
+    {
+      "path": "assets/inria/images/train-crop001646.png",
+      "sha256": "429c46af62daa856f2eb7921f0aa035195ff15e46372ed881cc9964fbe129f6b"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001646.txt",
+      "sha256": "4f87ec7de49b63709865d76992e6413b1dabae084ced4f05c9a2cd1027e77353"
+    },
+    {
+      "path": "assets/inria/images/train-crop001003.png",
+      "sha256": "2a3f563013d5cab6de1ba06afc74a791a8f994184efc8437a8d37057c6ca7bba"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001003.txt",
+      "sha256": "1196cea90c481fe90505ce6120a3b71777c09da733e073e061b13df16a93fb31"
+    },
+    {
+      "path": "assets/inria/images/train-crop001550.png",
+      "sha256": "8fa9db84ebf9224e443c6016e0f3eff35504493181482b7b9c60a7154295644c"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001550.txt",
+      "sha256": "c0461bb04425afdd023a5328424d22f0c1e83837cc7850d69a2eb346216ceb39"
+    },
+    {
+      "path": "assets/inria/images/train-crop001632.png",
+      "sha256": "31e10a2b6f06b38a6e79400116ab98f84e3e3960384d58111cac80f3f60e9a39"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001632.txt",
+      "sha256": "8142fc7085277eb1ad8d3d90c8c15c102f216a1ff9600eca1e85f6ea2861ff32"
+    },
+    {
+      "path": "assets/inria/images/train-crop001050.png",
+      "sha256": "cd61353221cf99f94aa5dc66516013fa0c3078b36a202f96cfb7cdba80baaaed"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001050.txt",
+      "sha256": "3964783f4f14ce92c19d4cab57b541a37578a0c0dd891788a6e5a901f22b10da"
+    },
+    {
+      "path": "assets/inria/images/train-crop001648.png",
+      "sha256": "2a16c15b9c4facbc510b808b19703da69ea9d19ea41b673ccfca401e97c96218"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001648.txt",
+      "sha256": "8318cba57d05fcd444afc3412c8a8e2ca75d60400f84a656794da02bee87b606"
+    },
+    {
+      "path": "assets/inria/images/train-person_199.png",
+      "sha256": "b3fab17ba1e0f1f8076c9144471a7be316465ed50199a8ebe10be070d99b86da"
+    },
+    {
+      "path": "assets/inria/labels/train-person_199.txt",
+      "sha256": "13860717cc64b74f6ccd5c5c6ccf9dedd3e1daff1bcbb5e83295e484fe95cc6c"
+    },
+    {
+      "path": "assets/inria/images/train-person_050.png",
+      "sha256": "363929b49ba2ce507ad11820a018b646994bae6d67a5eefbfd1cce723bab72a2"
+    },
+    {
+      "path": "assets/inria/labels/train-person_050.txt",
+      "sha256": "3f95d42ef9a2c86add656ec1bee5d4764acb03c94c0419f1e8e878e37b70c982"
+    },
+    {
+      "path": "assets/inria/images/train-crop001263.png",
+      "sha256": "eeb9f199ba59658dd01e8b6bcd10d72bcd983da53cfa9db0e49ad5c55556350d"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001263.txt",
+      "sha256": "35b130bccb7546c6b787d807c2a28ec871f15314f214e4c2d01bc433f7123697"
+    },
+    {
+      "path": "assets/inria/images/train-crop001201.png",
+      "sha256": "190aaa4bac1a68f97227857e563882e68634978ff9d2aa71febaa01aca42f04a"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001201.txt",
+      "sha256": "30b308927f27a7cb69d40d78e1bc6bf6ef0c527469093175dae2b935f951b1ae"
+    },
+    {
+      "path": "assets/inria/images/train-crop001059.png",
+      "sha256": "b7f636e2e2ea1c86e8993efce1cf716b0e57dcbf02a7d35fe253e4d767cccf1a"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001059.txt",
+      "sha256": "2b225ff6b816f4f868f9d6ebdc550cce89fd9531c7e2ec7f16796ad54c35fced"
+    },
+    {
+      "path": "assets/inria/images/train-crop001016.png",
+      "sha256": "5a26a4dd8c9342680b302cd45453065d3e676d2fd04afcd6625d5542591f0ccf"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001016.txt",
+      "sha256": "63e46dc8644cd90519c3b3853286445f6a42d7354fbfd2f69f5651db901aa2d9"
+    },
+    {
+      "path": "assets/inria/images/train-crop001051.png",
+      "sha256": "7927a2dac7c125f091204e250afe6d3bc5fcd81a3e6ec6aac74c17dec8c35cba"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001051.txt",
+      "sha256": "49e662ed70eb0b2a8db34595cc2d12dddd98530a9c9cd1d8e56d3678bfb1b95c"
+    },
+    {
+      "path": "assets/inria/images/train-crop001580.png",
+      "sha256": "23ed0b72ac5219aa1f706bb60b8edf715dd33389054412c0ba8f43217ab61303"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001580.txt",
+      "sha256": "6976395b22e825caa52dada586766e75bd0f65446df49cc265db351ed7f408f3"
+    },
+    {
+      "path": "assets/inria/images/train-crop001079.png",
+      "sha256": "26fdfb514540f0b6516ca097538aaccd018a1568782545a9186d36a1f5960bcb"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001079.txt",
+      "sha256": "6c981549bfa6f4e57909a39f82046730c1273e8222c3333ea994f253b8b7cdf1"
+    },
+    {
+      "path": "assets/inria/images/train-person_139.png",
+      "sha256": "3f8bba0d093c0ea3edb7f14d55dea427d3e43eee0fe0c402d9691814b8d20618"
+    },
+    {
+      "path": "assets/inria/labels/train-person_139.txt",
+      "sha256": "865cc60e3f41bd962b56497f2d410a34651f385a82ba8359472421cb2e37df40"
+    },
+    {
+      "path": "assets/inria/images/train-crop001665.png",
+      "sha256": "caadbab272994e9322ed8837708e1bffad712782072206db216399ac0adda131"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001665.txt",
+      "sha256": "4666402900e8baefed0781b7e7e4093cdb7fce0b686a4bad9da9ff39d47bcf16"
+    },
+    {
+      "path": "assets/inria/images/train-crop001133.png",
+      "sha256": "65f55f5322bf69bdd7b2a0226976ea913a61cd4a782803f57124806d2b652795"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001133.txt",
+      "sha256": "a7b2f051495448cc92b861ff9ce2442895d4db100034f37479e4776b497dbd67"
+    },
+    {
+      "path": "assets/inria/images/train-crop001054.png",
+      "sha256": "4ef967c82057ad710168c0544a9adb796d2d08b25fd24b2f607749e12caf2001"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001054.txt",
+      "sha256": "b4f50aa9df389803923166d298247a240300b798f5bcf689a665f7fc128a67f2"
+    },
+    {
+      "path": "assets/inria/images/train-person_131.png",
+      "sha256": "538399be955f3280532b1dc85d554403dbbaed9a294aa8f304771e22a6b2c50a"
+    },
+    {
+      "path": "assets/inria/labels/train-person_131.txt",
+      "sha256": "6cde68e740714117fac669f566fc22b801f1ae01040b24ceff9571a0651edd6a"
+    },
+    {
+      "path": "assets/inria/images/train-crop001612.png",
+      "sha256": "8e4557facc17d8e9fbe03c8cccfd07f2a4f1e795357b38e35469a318f6277df7"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001612.txt",
+      "sha256": "b082f0ed68c5cfdb7b9a09963561146aa620926136a4a2b7744f39030e671e24"
+    },
+    {
+      "path": "assets/inria/images/train-crop001138.png",
+      "sha256": "e869034a62c7d4aa7f0754050d67c30e2027fcab7ee26783fd6ecd006cc93193"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001138.txt",
+      "sha256": "0968809594ed08a6abfaec7a0448ea096c44f02a739c5f84694cd8d96acf1dd9"
+    },
+    {
+      "path": "assets/inria/images/train-crop001127.png",
+      "sha256": "5e3979a27bc0c47c253d7be6362348a84f6c5a26f7a583a18a4077b433d00919"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001127.txt",
+      "sha256": "399dd6d84ed125922125a922040a99c8d4bc0f3fd2435938502c8f5c9a164ee0"
+    },
+    {
+      "path": "assets/inria/images/train-crop001206.png",
+      "sha256": "357b48a611463feaae370a111727fd67a34ae21fd957557501372a37d1349999"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001206.txt",
+      "sha256": "98e612025dfca0da58285f3478e9887e87347cdea519796a8ccf26d7ce96fa53"
+    },
+    {
+      "path": "assets/inria/images/train-crop001561.png",
+      "sha256": "39bf1a691543d2965d7395079b6f173126df89c677b3eb5380c65d24c6fef512"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001561.txt",
+      "sha256": "e39eaa455d61d15ebc998f33f9ee947965058038cb3501aa007884354df73930"
+    },
+    {
+      "path": "assets/inria/images/train-person_and_bike_146.png",
+      "sha256": "6d833781f89eb280d121133ff49ce7cebb64f2cd3ee10d02dd89599458915fec"
+    },
+    {
+      "path": "assets/inria/labels/train-person_and_bike_146.txt",
+      "sha256": "1bf3507cce86086acf77a0bfa114ea75a5a18fad010f3004eae353223b18eb93"
+    },
+    {
+      "path": "assets/inria/images/train-person_329.png",
+      "sha256": "ba233fd042edc2819cea68d640a28eed6483838d88f70d4b5da3986ff3a0ae14"
+    },
+    {
+      "path": "assets/inria/labels/train-person_329.txt",
+      "sha256": "52eebf6b8b4b10b0ca8c82278693c155a47e1684f1f3e6f4e3c098462e62932c"
+    },
+    {
+      "path": "assets/inria/images/train-crop001236.png",
+      "sha256": "e295420ceb1cb1787a49c8a6bfb9c07bdc08981d264d5a2ce23dcef3de1e4333"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001236.txt",
+      "sha256": "569c7ee9cc1e9a65624405eafb21620de2d9814fc1500b9031136b90995b1858"
+    },
+    {
+      "path": "assets/inria/images/train-person_273.png",
+      "sha256": "6dd2c47db9af794613ebb69e11fb0c281732999df55f4c20d5ba7d31ac52a29e"
+    },
+    {
+      "path": "assets/inria/labels/train-person_273.txt",
+      "sha256": "63e6c740e2334df2fa22624f6d2f66154d9def4f6a0f4f3fbe781a28dbf2c1c4"
+    },
+    {
+      "path": "assets/inria/images/train-crop001022.png",
+      "sha256": "d1396e5bbe8347e8a44518f570db0d56f76a1dca0b4de7e0614e9a10e8be2360"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001022.txt",
+      "sha256": "3c346bb682be460479f5b0d16d84557f99c4a484bddcecb400b732f6ac0f37f6"
+    },
+    {
+      "path": "assets/inria/images/train-crop001144.png",
+      "sha256": "3f4d286dac0ddb6ee0947b2c20b4f92ba422861fd01d37b805719e7b30fb4cb2"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001144.txt",
+      "sha256": "d5d3485c8cf089b936cbf768da87e03ace4505e90283fba94abf56226e53a7b9"
+    },
+    {
+      "path": "assets/inria/images/train-crop001584.png",
+      "sha256": "1ddcc5f586ee51382654bc159aea63e01d2e5f522dbbdff5ddc14f686a674461"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001584.txt",
+      "sha256": "9ed41684a6a351510f82973eb164cd3370346de90be7d38c146729ed955b272e"
+    },
+    {
+      "path": "assets/inria/images/train-crop001832.png",
+      "sha256": "bff54ada27f9f7b8e136d79d0110f3cb62fc5261639a97912026d62562f212c9"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001832.txt",
+      "sha256": "aa06743dab935dd86c094e9a7a38c9762832aae6276d86037852312afb45c069"
+    },
+    {
+      "path": "assets/inria/images/train-crop001038.png",
+      "sha256": "abe6eed9ef37fb82572af90df49b9bcd0b5901c7b38c69dc6fb3b15a24b8b67e"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001038.txt",
+      "sha256": "ec96cc6f732a60067320b63ca5810cd0ae4c11b7b19b81ee27b854823db70591"
+    },
+    {
+      "path": "assets/inria/images/train-crop001246.png",
+      "sha256": "fb8daa3d48d4693506f1a9ba3f70efd2eb0b6e246a0b03210951553631f410d6"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001246.txt",
+      "sha256": "0503470cd65748671527fb767590142b3ee4bacd45a6a6943992247feee21052"
+    },
+    {
+      "path": "assets/inria/images/train-person_142.png",
+      "sha256": "b21644d242e886224a01218ea262cefada5eed87c7bf078dddf32f7535fee7b4"
+    },
+    {
+      "path": "assets/inria/labels/train-person_142.txt",
+      "sha256": "0f58ae8136ea47899764e9e6e88c840db9cb9666a4a3482a845d8277e8d1d06f"
+    },
+    {
+      "path": "assets/inria/images/train-person_114.png",
+      "sha256": "15fec8e0202b86b9f4e6b5fccb212ef4baa9135ca5bfdedf10b1eb6ed51d77fb"
+    },
+    {
+      "path": "assets/inria/labels/train-person_114.txt",
+      "sha256": "ea579c59b6e0279c53f1c04f00b8b978b725939f3af3ca5fe2727abe59047eba"
+    },
+    {
+      "path": "assets/inria/images/train-crop001568.png",
+      "sha256": "eb64c71e12be93de53263867da007020058b4fbfc8684c21a12207bdd3ba3442"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001568.txt",
+      "sha256": "2ac05cb7bd8371d3ab7376c669f0f9cccf6f99f550b229e5e47d8fc06bb5beb8"
+    },
+    {
+      "path": "assets/inria/images/train-person_211.png",
+      "sha256": "ac9c121cf2d60ec9278617a7c6508319b46f38dc9afc623dfab1926afc1f6458"
+    },
+    {
+      "path": "assets/inria/labels/train-person_211.txt",
+      "sha256": "3d23d2874cfe06d8d81314fbe1b75e75cfbb5ffc1bea84c59f802f8c5fb9d7c0"
+    },
+    {
+      "path": "assets/inria/images/train-person_and_bike_134.png",
+      "sha256": "09ead77c70d02ef5ea113cd23cc333bd9e3176fbaeb554a51aa506d09dd80091"
+    },
+    {
+      "path": "assets/inria/labels/train-person_and_bike_134.txt",
+      "sha256": "89b8b4c82c7d08a753777fbf2d91f2e948fcbf0125aef76567d9fc48b00c8fec"
+    },
+    {
+      "path": "assets/inria/images/train-person_319.png",
+      "sha256": "719010b017b1677786ee23df407543413d882ad0de84402b04faec9e45a0a800"
+    },
+    {
+      "path": "assets/inria/labels/train-person_319.txt",
+      "sha256": "4f0ac79b1079ab0376c2dd1272b08587c69d23e63b3e180d6812d82d7938c1f5"
+    },
+    {
+      "path": "assets/inria/images/train-crop001270.png",
+      "sha256": "d3ffb973fc1587502a7eb76e11190268ada4aad13d1dbde0bb8b5652915b0f1b"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001270.txt",
+      "sha256": "ef146a07b57c075639ec0e6221c0107162bb2d5c5a08ccb72e3a8c8c573519f3"
+    },
+    {
+      "path": "assets/inria/images/train-crop001823.png",
+      "sha256": "a8373376651111b2e0ea71f3342c7b8be40a4d80c7eb6886bc47b0b211a3d4c6"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001823.txt",
+      "sha256": "0a0ccbad0bb41522329d1fcacdd5221a1ab77c8ca919e3b9bfaade761897f30d"
+    },
+    {
+      "path": "assets/inria/images/train-person_and_bike_002.png",
+      "sha256": "ffa78d3dcd952e20860a2456b19c38de70513191a050ea3fd7c8f25081a01462"
+    },
+    {
+      "path": "assets/inria/labels/train-person_and_bike_002.txt",
+      "sha256": "40091df8359c1dd14485451fd2f62b5803a75d59a25778976aa86b6b4017a20f"
+    },
+    {
+      "path": "assets/inria/images/train-person_349.png",
+      "sha256": "2cf5e98504314c7cbe19023effa208e1e66e594b1c6d01dd7eb6bf0c1d1ba4f9"
+    },
+    {
+      "path": "assets/inria/labels/train-person_349.txt",
+      "sha256": "893fcd9160da64d97effcfbe8495618ebce0b383ed7c6161943af9e449ad8135"
+    },
+    {
+      "path": "assets/inria/images/train-crop001806.png",
+      "sha256": "24297f9a3bf90f727d7f934422d8da51c2e8002f58030a37ed7b6935e2fdc204"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001806.txt",
+      "sha256": "f03e59ae11506a4e75bf7f9a51e96e634899c655d50c40398b90daeb5bcb9448"
+    },
+    {
+      "path": "assets/inria/images/train-person_and_bike_155.png",
+      "sha256": "92ae99c9eb2c864f7c12b59516a990621946fc9aa087e51061b7ddf0605396d8"
+    },
+    {
+      "path": "assets/inria/labels/train-person_and_bike_155.txt",
+      "sha256": "1fb231bfddcabf4b6b212b767d732994b79da0523e02a77f44451a62417b4a5b"
+    },
+    {
+      "path": "assets/inria/images/train-crop001519.png",
+      "sha256": "ddf9fbdf5bec2aab1eae56ab97c940b6d8e602e16df4783dd36b6251f6976252"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001519.txt",
+      "sha256": "183c9e79ed127af1bb790f2a15be06ba6f018247e37ae696fc4c16ffe3b39ccf"
+    },
+    {
+      "path": "assets/inria/images/train-crop001553.png",
+      "sha256": "6acf3101480fdbc237db3daca92b6c465ba37df86a64dce8f1052ccf0d0f7bcb"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001553.txt",
+      "sha256": "c04d6695b12608545a3286f942c258f5011a00220a4b8320a08ef7bb1714caf4"
+    },
+    {
+      "path": "assets/inria/images/train-crop001137.png",
+      "sha256": "0ff8713f65a26e2877cbe592d92d68b8ee12ca460e0efc506f1365953beff2a4"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001137.txt",
+      "sha256": "b58f411467b9ce7bf4917f573bef35945279c18b3c095209921bd6be28684ba9"
+    },
+    {
+      "path": "assets/inria/images/train-crop001042.png",
+      "sha256": "5ec6855b91a53f6719a2613ddf60fa0ef70a6b7f39687043615cf9515511b766"
+    },
+    {
+      "path": "assets/inria/labels/train-crop001042.txt",
+      "sha256": "88a5756a8212b5ea8a612780eaf89360cb8e9d8f1478c8cb6d25bf5cecf57170"
+    },
+    {
+      "path": "assets/inria/images/train-person_225.png",
+      "sha256": "43c1e23acc05ab43b0f2114a331f964eddd50138dce6bf7e729912483df2a340"
+    },
+    {
+      "path": "assets/inria/labels/train-person_225.txt",
+      "sha256": "d894101110d21c077de67f83e46b1159a1f51ab4fa0d7a05092cb2704f38c4e1"
+    },
+    {
+      "path": "assets/inria/images/test-person_099.png",
+      "sha256": "d9f8c072e3b8ecebc1149e652b480cc7507d27edfde0ddde65d7238475f6633b"
+    },
+    {
+      "path": "assets/inria/labels/test-person_099.txt",
+      "sha256": "e74bfc2c74f125b40c3ccf96cb5ae2d59144bd3224a1f5dc35446c80d2f7c18a"
+    },
+    {
+      "path": "assets/inria/images/test-person_and_bike_102.png",
+      "sha256": "44bd1ac632a7d63a4c234be100e3d54911585f07b1e24ddc68f48320a8165953"
+    },
+    {
+      "path": "assets/inria/labels/test-person_and_bike_102.txt",
+      "sha256": "f6b60a1c4343d3660ea6b56975c8f9e3575c53f86ecb797ed2756978d8305664"
+    },
+    {
+      "path": "assets/inria/images/test-person_248.png",
+      "sha256": "992cb58f3d8dfe619336bb4d19171dddb998b20e47fc3c152d1a5f1a37b57d94"
+    },
+    {
+      "path": "assets/inria/labels/test-person_248.txt",
+      "sha256": "e7933346bc695c3435bfdf044eef0ee585cac0641e60be368ae0367c2b81653a"
+    },
+    {
+      "path": "assets/inria/images/test-person_and_bike_038.png",
+      "sha256": "43ad0b2c990150b73e2e7707b7b6d04234882d48596adb4a442049382952c765"
+    },
+    {
+      "path": "assets/inria/labels/test-person_and_bike_038.txt",
+      "sha256": "818869f0103962b20f576b9947f8fa7961738911941eeeb371e86e4781907e3c"
+    },
+    {
+      "path": "assets/inria/images/test-crop_000005.png",
+      "sha256": "16f2a0828b8bee782821a807ccb9a241ca50f90dc26a4be20a046a04a0ba8ae0"
+    },
+    {
+      "path": "assets/inria/labels/test-crop_000005.txt",
+      "sha256": "df85b2e7fca08e0e5220392d331ab2ec024153de1545dc6e063f1f3e63789667"
+    },
+    {
+      "path": "assets/inria/images/test-crop001653.png",
+      "sha256": "3e7316e2abf516171f963f28181afb0a76698d3c2b4970dfec15914a8a7ff2ae"
+    },
+    {
+      "path": "assets/inria/labels/test-crop001653.txt",
+      "sha256": "c42b401d08470163b02a6c0b361c53e5c8c86801215c2dc3db083c05bd0ee3ba"
+    },
+    {
+      "path": "assets/inria/images/test-person_135.png",
+      "sha256": "a8dd7b839bbdb29660715016fa2d2ca1dd06ee6892d2e78f03633d9e49192454"
+    },
+    {
+      "path": "assets/inria/labels/test-person_135.txt",
+      "sha256": "0b0c16eef864b18b27762522ac2cdb3bbe37e582de6a1ee12397d4590453fd4d"
+    },
+    {
+      "path": "assets/inria/images/test-person_and_bike_054.png",
+      "sha256": "468c3a651c3cf745a3eb6b4b282d84e268962bd7ad6cefc94963e954711f6c23"
+    },
+    {
+      "path": "assets/inria/labels/test-person_and_bike_054.txt",
+      "sha256": "cca478f07b66f11abcc39478693dbd0b44a24256a4baed421e9beaaa5af517c1"
+    },
+    {
+      "path": "assets/inria/images/test-person_and_bike_048.png",
+      "sha256": "e369dc440616c994cee39a18c88d6eeb7dbe0a7fbf014a53d68ad4219e54f3a5"
+    },
+    {
+      "path": "assets/inria/labels/test-person_and_bike_048.txt",
+      "sha256": "892cd4f611a355606fdb3a4b2c1a13b8ca729640c9a487895cc1246e0812ab6c"
+    },
+    {
+      "path": "assets/inria/images/test-person_317.png",
+      "sha256": "7f9fea2f9d0f533a8926a4fc7c2e2d9943bcd34f7abe401f2c05e42c631c9faa"
+    },
+    {
+      "path": "assets/inria/labels/test-person_317.txt",
+      "sha256": "c07896a6cd013e1b11f8dae615367d4b1f6d9a34c806015cc40d715b47a0d532"
+    },
+    {
+      "path": "assets/inria/images/test-person_and_bike_058.png",
+      "sha256": "e0da52c03721815b08815c3a6830f7e49155515a62fc0f0c502b38f2f550c723"
+    },
+    {
+      "path": "assets/inria/labels/test-person_and_bike_058.txt",
+      "sha256": "caefd559403bf5de8b73441e61316ed03afc1b888eb00182ad5aed87d6d0a547"
+    },
+    {
+      "path": "assets/inria/images/test-person_093.png",
+      "sha256": "7bc70f2d186947c997ff899dbe031c4233363565f44a13ba94a46463ecfae5ae"
+    },
+    {
+      "path": "assets/inria/labels/test-person_093.txt",
+      "sha256": "db206290170d814992f2ab044d64ae69b6cd7c9bd33c2bef594cb57b0f28ad0c"
+    },
+    {
+      "path": "assets/inria/images/test-crop001723.png",
+      "sha256": "24f8a2d0dc6397b33c5bad5d84c484ca8d51358240d346dd81af52361def20e3"
+    },
+    {
+      "path": "assets/inria/labels/test-crop001723.txt",
+      "sha256": "0607ad265d486d5bebcb15ca76822fc8cb4cc8257597505de8342b4d26492476"
+    },
+    {
+      "path": "assets/inria/images/test-person_and_bike_104.png",
+      "sha256": "3bf9d2ebf34fc1a97ddd1f390fd010679c9548766b3ffd8b8647d05bf1685ede"
+    },
+    {
+      "path": "assets/inria/labels/test-person_and_bike_104.txt",
+      "sha256": "f4d2520113cababa92f44c35330e6714ea29cb11d9c1ddb890e78d6a4303752a"
+    },
+    {
+      "path": "assets/inria/images/test-person_and_bike_066.png",
+      "sha256": "e91f8a83e91d68595ef7fc07d33e10731d5a94de08801d2ce2778d7c7ad49de1"
+    },
+    {
+      "path": "assets/inria/labels/test-person_and_bike_066.txt",
+      "sha256": "b65feeefef17273b0cb681fa830ed37bbec333a012d836715efcbf69245e1b98"
+    },
+    {
+      "path": "assets/inria/images/test-person_053.png",
+      "sha256": "11b940830632974b6a967c01f85a26222b9f8be717483b551ca26d7e7c5003f9"
+    },
+    {
+      "path": "assets/inria/labels/test-person_053.txt",
+      "sha256": "f4fda3251884bf0c220587a1543872bec1adef052493fccfd5046b9c518f0d2a"
+    }
+  ],
+  "originals": [
+    {
+      "image": "train-person_and_bike_147.png",
+      "source_image": "INRIAPerson/Train/pos/person_and_bike_147.png",
+      "image_sha256": "419702be5e8578eb1bd872191e0d60a7fb60bda9a230bceaefb100dabc83ac75",
+      "source_annotation": "INRIAPerson/Train/annotations/person_and_bike_147.txt",
+      "annotation_sha256": "ba50138da7ace5572cf628b70612781987b7f2afecf4224a1defc6fa3a46ae07",
+      "boxes": 3
+    },
+    {
+      "image": "train-person_295.png",
+      "source_image": "INRIAPerson/Train/pos/person_295.png",
+      "image_sha256": "a25bb5f54947e13e36c87f8c8b62a5f221abe512cfcdcd76142bef625fc8bb36",
+      "source_annotation": "INRIAPerson/Train/annotations/person_295.txt",
+      "annotation_sha256": "012c3817e1184ba1b2dea013bda7616a45ca92a19846819e4ff3577e6d402e68",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001089.png",
+      "source_image": "INRIAPerson/Train/pos/crop001089.png",
+      "image_sha256": "371302aa8e02f9c19937e6581a97bfccb1d0d36fa284f16f07143c2fbf1a3547",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001089.txt",
+      "annotation_sha256": "48c6bd7ab1768865e290dd10dc08a4fc8ac948958f9152fde30d6c9aafaf47fd",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001671.png",
+      "source_image": "INRIAPerson/Train/pos/crop001671.png",
+      "image_sha256": "5c6a999b492794e4477413cae88c893a505cf28f01c1f40a3659120ea344ba64",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001671.txt",
+      "annotation_sha256": "f2cca7320a39494a9cef3a2501331be9c2041306d0e239134605e9fd56449a18",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001610.png",
+      "source_image": "INRIAPerson/Train/pos/crop001610.png",
+      "image_sha256": "8f1fbbeb662bf5d89671c3a0c782d1ac0ab637f4c6d18790cc086f3a74769db5",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001610.txt",
+      "annotation_sha256": "082078298364aa953524044a50210601f70e7338a589677885fe14896911fd58",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001649.png",
+      "source_image": "INRIAPerson/Train/pos/crop001649.png",
+      "image_sha256": "f20832952c2234136655a9e44176dc5029d997eaa426cc45a4c6e6f787a782b7",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001649.txt",
+      "annotation_sha256": "d40e1f3c3d3b0dbf3c97d97e9f36d6d0c6d84206d8f725cb737c8dbc4c6367d1",
+      "boxes": 4
+    },
+    {
+      "image": "train-crop001529.png",
+      "source_image": "INRIAPerson/Train/pos/crop001529.png",
+      "image_sha256": "2e30d3368414b73f582fa86d30d5bf22b144ffcfc87e36ddb9b2b84f5e61b5ac",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001529.txt",
+      "annotation_sha256": "0886f609d56c93959ceb15b0fea6ee2edd69b12acb0404d2411c22c1965d0695",
+      "boxes": 3
+    },
+    {
+      "image": "train-crop001582.png",
+      "source_image": "INRIAPerson/Train/pos/crop001582.png",
+      "image_sha256": "bc2771f586e4eb7918acb354b9964d6faab6e3ccddd1aaa7ba56082508f56211",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001582.txt",
+      "annotation_sha256": "28da566995f91c39970b9c392debf26aa0f5e0bda0a90a9146ec62b88d5a4a60",
+      "boxes": 1
+    },
+    {
+      "image": "train-person_130.png",
+      "source_image": "INRIAPerson/Train/pos/person_130.png",
+      "image_sha256": "548e1d2113a96e4b2efc9147a2946ae230ca4408de574640e82475862f31d6b6",
+      "source_annotation": "INRIAPerson/Train/annotations/person_130.txt",
+      "annotation_sha256": "92aea9efb6dde14692f5ebf8d95bbadc91906639445a4d832e88dfd9a340fd62",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001222.png",
+      "source_image": "INRIAPerson/Train/pos/crop001222.png",
+      "image_sha256": "12652cc672063bec37aab7cde52cfa2ac6d8f73884969a458e0477bf9b3021b5",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001222.txt",
+      "annotation_sha256": "bf9b01069c2d81c1c3b88f826bd8bee239da2e450dd2dd40f51b8987afa5df06",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001680.png",
+      "source_image": "INRIAPerson/Train/pos/crop001680.png",
+      "image_sha256": "55f39b7cbad208fc148ba1075367af0323c6d992dddeb656f38ced8d19d83636",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001680.txt",
+      "annotation_sha256": "c691925e0ad9e8dd4686b7fbc4fa9f7f3135cf8873a2ee6d7b24d695ac3f9eae",
+      "boxes": 2
+    },
+    {
+      "image": "train-person_177.png",
+      "source_image": "INRIAPerson/Train/pos/person_177.png",
+      "image_sha256": "86ab9c0765f21443fbfe97a379ff14642c85873413a2653762c103e870f9ed89",
+      "source_annotation": "INRIAPerson/Train/annotations/person_177.txt",
+      "annotation_sha256": "351c84b30831c5b72d31554b5a4f0a65ee1a659cba9f141fbf0b02cf4dbba3ff",
+      "boxes": 3
+    },
+    {
+      "image": "train-crop001646.png",
+      "source_image": "INRIAPerson/Train/pos/crop001646.png",
+      "image_sha256": "1d370f8189a8158355bf69b83cbcd44a8f1bbb4de9211d8d592041a75843e48d",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001646.txt",
+      "annotation_sha256": "a44cc3195e190be3a094bba6fccf92b2b037522f99ba5c855464b8aa31d0c72a",
+      "boxes": 5
+    },
+    {
+      "image": "train-crop001003.png",
+      "source_image": "INRIAPerson/Train/pos/crop001003.png",
+      "image_sha256": "d778c710592e1e0d399231e6056d2ee25af090ef4092c719d0707c0d6f6687a5",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001003.txt",
+      "annotation_sha256": "192588a62382ffbcb0a784650a6ae3a194613af30924ff08124dbbff744a21ba",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001550.png",
+      "source_image": "INRIAPerson/Train/pos/crop001550.png",
+      "image_sha256": "594dd5bb8d00332fbde662283a0bcaf2ea2c12abe7a6e254b6cdc41134e6b72b",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001550.txt",
+      "annotation_sha256": "047dd633d6a31698ad939518d0c305a31055763db30b2668546b20b585c0078d",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001632.png",
+      "source_image": "INRIAPerson/Train/pos/crop001632.png",
+      "image_sha256": "5855d5dc433340f9bd65c95960f7cfca80655b08c81e9a9b3aefc801a5652e76",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001632.txt",
+      "annotation_sha256": "3f5158f4b0426723d35e7833e52b704a4c3b5c99f1a7237d4c048f7e42483fd6",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001050.png",
+      "source_image": "INRIAPerson/Train/pos/crop001050.png",
+      "image_sha256": "3b9b00df913311ddb5c58979b302e51d81468643ffe34f4da8ea0ec86400c37e",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001050.txt",
+      "annotation_sha256": "0ad904c75b63d6846f4c57989e15c4dcb1541172e741e01d7415602482d825c4",
+      "boxes": 5
+    },
+    {
+      "image": "train-crop001648.png",
+      "source_image": "INRIAPerson/Train/pos/crop001648.png",
+      "image_sha256": "f63c9be609b8f0918119495ecefc290d4081364505654c8d60f99fde92a3061a",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001648.txt",
+      "annotation_sha256": "27f6126867a7fad87daa60f365d848c9ec76ff91db3119c9e7bf07719b2e0c7b",
+      "boxes": 2
+    },
+    {
+      "image": "train-person_199.png",
+      "source_image": "INRIAPerson/Train/pos/person_199.png",
+      "image_sha256": "1b730860ef2c69ef33a9307a2570dc5e943f01b1855f5afbb5d7e2eb73ddff93",
+      "source_annotation": "INRIAPerson/Train/annotations/person_199.txt",
+      "annotation_sha256": "9bc45e5b8389a2b3df7659981c6f1deaede23d3fbe96d4b54a8159f4386326b6",
+      "boxes": 6
+    },
+    {
+      "image": "train-person_050.png",
+      "source_image": "INRIAPerson/Train/pos/person_050.png",
+      "image_sha256": "f5ea7100b361202d86fdfd18d3812f71056d56afd210e726686d835675f4430d",
+      "source_annotation": "INRIAPerson/Train/annotations/person_050.txt",
+      "annotation_sha256": "5a0386f5c6e3d0a00edda357bcbaf21d27ed5733d2d5121caace9c9e62b2f974",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001263.png",
+      "source_image": "INRIAPerson/Train/pos/crop001263.png",
+      "image_sha256": "bbd2f42daac6e7f2977fcaa8d560c127409f8cfdbfaa18d3917d62a2ca3544e9",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001263.txt",
+      "annotation_sha256": "7efe9555dd99da61d98edfefe206b18366e6437ed99da1f8c11521f71702b019",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001201.png",
+      "source_image": "INRIAPerson/Train/pos/crop001201.png",
+      "image_sha256": "16c376e0be775c96dc2056647076d6541cde0408858f0b25eb6d9ff448cd0532",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001201.txt",
+      "annotation_sha256": "addde794c151e4001444f44a927a171db88930c6f8e2a5159d52e1a3fcedea1e",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001059.png",
+      "source_image": "INRIAPerson/Train/pos/crop001059.png",
+      "image_sha256": "22e4c1de9a2d1c993d33378ea5014abf5c1dcc815a0e657d98c8874be39fb47d",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001059.txt",
+      "annotation_sha256": "cb2c910a76799d40213c6af492492435eba383c58fb0a4dc5feae16a4f168171",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001016.png",
+      "source_image": "INRIAPerson/Train/pos/crop001016.png",
+      "image_sha256": "ac18adec1edf16045bb922a155eae0cc8285685d4dcb05e0c7970a902df95ce6",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001016.txt",
+      "annotation_sha256": "0f566d7e734d317047be8a999a056ed36d0ac835c33380a7968d5645cd7e7d86",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001051.png",
+      "source_image": "INRIAPerson/Train/pos/crop001051.png",
+      "image_sha256": "0226dc226507ad02227e2d6b084300369a5d83e5908021677876a9cf54db1667",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001051.txt",
+      "annotation_sha256": "a592a1ad7d661713ea890f48e5eee542c59334ac33a866bd8d226b2ceeae8c71",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001580.png",
+      "source_image": "INRIAPerson/Train/pos/crop001580.png",
+      "image_sha256": "f6d73d1b591b9d6ec657fb1c77dbbc6e54e923f2f084d45b01270b070f9fa090",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001580.txt",
+      "annotation_sha256": "5310c265aa0cf64fa69126f22328f014fd921155f2b4702ee58f4999a848ef98",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001079.png",
+      "source_image": "INRIAPerson/Train/pos/crop001079.png",
+      "image_sha256": "829d4f91985fe097976e460c845dda4c1338b15326128697b888a5b1b5f337b5",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001079.txt",
+      "annotation_sha256": "e167d86280ccfc63ce32e53891e4aee5fcba84454a084b5979f42b3eafa21177",
+      "boxes": 6
+    },
+    {
+      "image": "train-person_139.png",
+      "source_image": "INRIAPerson/Train/pos/person_139.png",
+      "image_sha256": "23cee620232dafcc662598744f03ba3e3a18065d5415752fb4d39aa12ad8e87c",
+      "source_annotation": "INRIAPerson/Train/annotations/person_139.txt",
+      "annotation_sha256": "6cf48b5e6d1dd45a5214470ceadf6d83844f765fe90db2ac3548e29e3db83463",
+      "boxes": 5
+    },
+    {
+      "image": "train-crop001665.png",
+      "source_image": "INRIAPerson/Train/pos/crop001665.png",
+      "image_sha256": "8fe2a9b3eec38aa8017ab3373e38b74315078bcb748bd1017217056af4e1f717",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001665.txt",
+      "annotation_sha256": "c74167f9e050ca5035c6f6499ffef8bf1023b81658841ec2fe9e42cb13b49d2d",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001133.png",
+      "source_image": "INRIAPerson/Train/pos/crop001133.png",
+      "image_sha256": "b4cbbcc4f87f552c85167d84cddfa668607c5b0b62ea61abf159769968c54e22",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001133.txt",
+      "annotation_sha256": "c9a6b8f39d40eb984f16b4551447ab7187ae135a99e688c1d585c4cfa3e5033d",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001054.png",
+      "source_image": "INRIAPerson/Train/pos/crop001054.png",
+      "image_sha256": "ba28780051a05fe6bbf4ff4f39f8e7890324e023bf65e8581c280d8ae5ff27ca",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001054.txt",
+      "annotation_sha256": "0a6e6c213fa9c713c0643acefbbbec994974c514f228a47c75845b96a4efc212",
+      "boxes": 2
+    },
+    {
+      "image": "train-person_131.png",
+      "source_image": "INRIAPerson/Train/pos/person_131.png",
+      "image_sha256": "463f35694dbf62e256b1ef0eb89d0b25e52a7b81b77a687b9da40dd1f8342247",
+      "source_annotation": "INRIAPerson/Train/annotations/person_131.txt",
+      "annotation_sha256": "715d08fa33833e9200bf8be2378e2591008576bdc41b24a7ec13fab1776198ee",
+      "boxes": 3
+    },
+    {
+      "image": "train-crop001612.png",
+      "source_image": "INRIAPerson/Train/pos/crop001612.png",
+      "image_sha256": "e878db69624f5a42d423752b851542158586a58e3b12d0984dcb159fb765621d",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001612.txt",
+      "annotation_sha256": "b598de82543c40879180d8ec1731b51d59dbf9956ab8723d67cb319bdf0b2764",
+      "boxes": 4
+    },
+    {
+      "image": "train-crop001138.png",
+      "source_image": "INRIAPerson/Train/pos/crop001138.png",
+      "image_sha256": "7e88305b2363e95f4f546470e89afed1e651c380a6d6f6b0b237c9ce68d492be",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001138.txt",
+      "annotation_sha256": "3a8150736e96ac751f7798aa6a7d13e847b73f0042141ff7d3b9afa08ec8f1b4",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001127.png",
+      "source_image": "INRIAPerson/Train/pos/crop001127.png",
+      "image_sha256": "717fd770a97551cae1eb38825a5efdff1ff4f24f7445972a69b7f098c5dfe9a6",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001127.txt",
+      "annotation_sha256": "26841207c0bc6093f456c3870c4897e0a0c7c1da7386ca301fa0abf940936f0d",
+      "boxes": 3
+    },
+    {
+      "image": "train-crop001206.png",
+      "source_image": "INRIAPerson/Train/pos/crop001206.png",
+      "image_sha256": "c2405fee3a905a85eb75c9293fc1d00df85e451ba4b2661db79135e795b70b93",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001206.txt",
+      "annotation_sha256": "256aea88c3d03992577316e5bbac6e5dfe98c52d94199df456ededb03c190b8e",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001561.png",
+      "source_image": "INRIAPerson/Train/pos/crop001561.png",
+      "image_sha256": "4ff042a2e861d30d3f792f0341ffafc22436970cf3999a80c31f77f79e29f939",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001561.txt",
+      "annotation_sha256": "f7e90d2ef1c10c6e5cd44de7cd08ce49b956455ef7791a3df8958bfea83006a9",
+      "boxes": 2
+    },
+    {
+      "image": "train-person_and_bike_146.png",
+      "source_image": "INRIAPerson/Train/pos/person_and_bike_146.png",
+      "image_sha256": "855b59f60b664d109e8643918ec618805fbd58a6adfd9f996fc60acaeb84a923",
+      "source_annotation": "INRIAPerson/Train/annotations/person_and_bike_146.txt",
+      "annotation_sha256": "2951ef4bfef0e9e1a91ad66bacb467ad61055a99f5c75f8970e0a68080a7b19a",
+      "boxes": 2
+    },
+    {
+      "image": "train-person_329.png",
+      "source_image": "INRIAPerson/Train/pos/person_329.png",
+      "image_sha256": "1da237312bf6468770eae128baac6d9a6e9bc2b8de947c4acd9964e8991d93cb",
+      "source_annotation": "INRIAPerson/Train/annotations/person_329.txt",
+      "annotation_sha256": "a50cad870b5d1c00eda01ac1273c6e9ddb66cb26c7c09127fa7cdf8c3184e53f",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001236.png",
+      "source_image": "INRIAPerson/Train/pos/crop001236.png",
+      "image_sha256": "b002d3d052896cbb9813c9d86f46b554f825bbcd7e02b031e2cf6d5f5c800f9c",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001236.txt",
+      "annotation_sha256": "20134dd4870c4cc4c950b79a21887538bcfa842b25e8ca34c3807d1a00a656d4",
+      "boxes": 3
+    },
+    {
+      "image": "train-person_273.png",
+      "source_image": "INRIAPerson/Train/pos/person_273.png",
+      "image_sha256": "93b29b78496a9bfc6c06bd8e94ad2f701fb8e6183c6be8270a39916dac7abebf",
+      "source_annotation": "INRIAPerson/Train/annotations/person_273.txt",
+      "annotation_sha256": "5a9c21e1ce847564bfb769e211ac32d0f993ae46f36fe7c322e66d2ab23a42ec",
+      "boxes": 3
+    },
+    {
+      "image": "train-crop001022.png",
+      "source_image": "INRIAPerson/Train/pos/crop001022.png",
+      "image_sha256": "117e02389beac8f1f6caeaa27c9000e7a1265e3cf3bf8b63db25cb01c62363c1",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001022.txt",
+      "annotation_sha256": "9cccca936f308005316c1ae16eaa8b714bbce4f3fbb7bfefc78fb35ee44f73bc",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001144.png",
+      "source_image": "INRIAPerson/Train/pos/crop001144.png",
+      "image_sha256": "7550c1668f591a236e61a7e06665db8d26f54c14916b10dac8d1ca1c5b0b3472",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001144.txt",
+      "annotation_sha256": "c28c61e63918b3a94d6a9ef80d12f9df117756991c0ee410bfc3476e32775e40",
+      "boxes": 5
+    },
+    {
+      "image": "train-crop001584.png",
+      "source_image": "INRIAPerson/Train/pos/crop001584.png",
+      "image_sha256": "08c67c7c61100f208a798a8e0f761811c423efa086d9a43ec6d5af4efafe65f0",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001584.txt",
+      "annotation_sha256": "126cf2a5b6a90a39be7f95d117b60cecb329f4e19020a075d5b0e4970e9589e9",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001832.png",
+      "source_image": "INRIAPerson/Train/pos/crop001832.png",
+      "image_sha256": "c4c2d02f88bf2ad33d16de70e5339938159c9eb714423c7f1e0d243c5546ceda",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001832.txt",
+      "annotation_sha256": "1eed83159b61588d2aa51c2e41bce54d6374917f5b7afe3c9de0518e8593ca72",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001038.png",
+      "source_image": "INRIAPerson/Train/pos/crop001038.png",
+      "image_sha256": "a1d5a6ea111c92e1e5285cd7da515529a8e23c1bfe98dbd167321e0d1f66452c",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001038.txt",
+      "annotation_sha256": "e73861e922e938d8c21d3ed982f4edee33f8e19058301b525309d65b999d8e2c",
+      "boxes": 4
+    },
+    {
+      "image": "train-crop001246.png",
+      "source_image": "INRIAPerson/Train/pos/crop001246.png",
+      "image_sha256": "0611c0c1ad07cfbfd7086ae1bea392c0fcdbf623e85af67caeea459afdc74bd6",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001246.txt",
+      "annotation_sha256": "743dffb2648f028d4160dba7995e6c7cb9dc29b74ef150ce8de3057adb4ecbdf",
+      "boxes": 1
+    },
+    {
+      "image": "train-person_142.png",
+      "source_image": "INRIAPerson/Train/pos/person_142.png",
+      "image_sha256": "322c1801f5acc66e98b3185832dd8673d17fea4f9fc0e0a5ed51633bfdd8ebf5",
+      "source_annotation": "INRIAPerson/Train/annotations/person_142.txt",
+      "annotation_sha256": "f6959323cea7dfe23e93cc497f259c3d10a345993e3ddf09bb098734a09c59b8",
+      "boxes": 2
+    },
+    {
+      "image": "train-person_114.png",
+      "source_image": "INRIAPerson/Train/pos/person_114.png",
+      "image_sha256": "3c2348fbc6e72bd956a55f3835dfb0af7cba0fcc67a16b1054f99749e441d594",
+      "source_annotation": "INRIAPerson/Train/annotations/person_114.txt",
+      "annotation_sha256": "08bd411b7dfe9a5a7e630305d7c5127dcfd2c71077268b50f5f152ab6c76c425",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001568.png",
+      "source_image": "INRIAPerson/Train/pos/crop001568.png",
+      "image_sha256": "bf566d0bccdf30438f18a8f4d1fd0b90bfabaecf54028a9d84871382b1a80050",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001568.txt",
+      "annotation_sha256": "c266c7c2ea20eaa8e7a26843912cf1ff09a8ecb30150fc70fbbfbf8b32002673",
+      "boxes": 1
+    },
+    {
+      "image": "train-person_211.png",
+      "source_image": "INRIAPerson/Train/pos/person_211.png",
+      "image_sha256": "0955b1c36a4b443720992e08d81f323ed4749323aad7d0b7919ea5d318d60303",
+      "source_annotation": "INRIAPerson/Train/annotations/person_211.txt",
+      "annotation_sha256": "3337798b837fe7a21ede83dc6ddd8f389d20ab12a57d10cd9f91b9228c4dc5b2",
+      "boxes": 1
+    },
+    {
+      "image": "train-person_and_bike_134.png",
+      "source_image": "INRIAPerson/Train/pos/person_and_bike_134.png",
+      "image_sha256": "dd6b20328a631dd56593adecc8f3fe03b7bf310e3b3289a3acdea0cf3f8c3928",
+      "source_annotation": "INRIAPerson/Train/annotations/person_and_bike_134.txt",
+      "annotation_sha256": "90ca228cd3a08e9f759425b65e6b63b9765a046cf922585ba91ce87273302cbe",
+      "boxes": 5
+    },
+    {
+      "image": "train-person_319.png",
+      "source_image": "INRIAPerson/Train/pos/person_319.png",
+      "image_sha256": "4406b725a9ec5665547f54296cfc0e0ea1ecf8afb82efa356b915759bcc78a42",
+      "source_annotation": "INRIAPerson/Train/annotations/person_319.txt",
+      "annotation_sha256": "7508ce9035e15a4980944437ae08687fd57b1321c09a31a67c0e82f37d63df5a",
+      "boxes": 4
+    },
+    {
+      "image": "train-crop001270.png",
+      "source_image": "INRIAPerson/Train/pos/crop001270.png",
+      "image_sha256": "f2989157d18128efe746c57464a8ee7977e6b8b946b482f18cee4a3118701957",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001270.txt",
+      "annotation_sha256": "8168e13bae5a8cecd8f8e41afdd0352dbadd86bc579b62a97ae95f4d68a76d4e",
+      "boxes": 2
+    },
+    {
+      "image": "train-crop001823.png",
+      "source_image": "INRIAPerson/Train/pos/crop001823.png",
+      "image_sha256": "85fbc00859d0e92322c43152b21754f6794d4d6900bd7720449db070b0760e88",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001823.txt",
+      "annotation_sha256": "234282e121c66510df61cd569e97184a2b17027f66af35847e3fd14ca87c871e",
+      "boxes": 1
+    },
+    {
+      "image": "train-person_and_bike_002.png",
+      "source_image": "INRIAPerson/Train/pos/person_and_bike_002.png",
+      "image_sha256": "b4f7a7d8c9fc3541ec3f6924f07d42dd1035ae873c512ae1f534f52d8bea68b7",
+      "source_annotation": "INRIAPerson/Train/annotations/person_and_bike_002.txt",
+      "annotation_sha256": "d62cfeec5c6bd1d89bc3e3a7277b43def7bde7bdaac4cf2af5c0504f6ba3864a",
+      "boxes": 2
+    },
+    {
+      "image": "train-person_349.png",
+      "source_image": "INRIAPerson/Train/pos/person_349.png",
+      "image_sha256": "d176eb493677bf432b443cde773187e5cd0d431cc0da1e21d9ace004027701c8",
+      "source_annotation": "INRIAPerson/Train/annotations/person_349.txt",
+      "annotation_sha256": "2cd702f39bed5226f8045072d8c9d3f83ecccd301a7c5b0e6cf2e78a09196f18",
+      "boxes": 3
+    },
+    {
+      "image": "train-crop001806.png",
+      "source_image": "INRIAPerson/Train/pos/crop001806.png",
+      "image_sha256": "4bf065c4fd1f7da6f5a6ce7a8c1dda8651bf2d60f811ae92562233ef292fd7db",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001806.txt",
+      "annotation_sha256": "d042313a9f7bb8d3b815f250c17eaf4e6a5d21c8ec37442a680edb07bdfa6296",
+      "boxes": 4
+    },
+    {
+      "image": "train-person_and_bike_155.png",
+      "source_image": "INRIAPerson/Train/pos/person_and_bike_155.png",
+      "image_sha256": "6bdf0406c06053437232902f9d8ab81ddd889eda93d8504b2d168cda94266aca",
+      "source_annotation": "INRIAPerson/Train/annotations/person_and_bike_155.txt",
+      "annotation_sha256": "67ac4fd22e7003a7db70987c897d66e0f297f70609d155ad74b899877832c8cd",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001519.png",
+      "source_image": "INRIAPerson/Train/pos/crop001519.png",
+      "image_sha256": "46d03700477115953442662591520dd6ffd4fb850e6c6de41f5996066a6fe331",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001519.txt",
+      "annotation_sha256": "74f5c325727673bb878398d145ef0b0ee77bee3a90fc0f427e1009a4e8be1905",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001553.png",
+      "source_image": "INRIAPerson/Train/pos/crop001553.png",
+      "image_sha256": "310833fe099c9c2bdfa7b6df85a034b7c432e01c105d238073536ac78b740b8e",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001553.txt",
+      "annotation_sha256": "a9afe58cf347374dc250111d0bd26ffe634a98675aa8a4d1c49bd3c1cde8cde2",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001137.png",
+      "source_image": "INRIAPerson/Train/pos/crop001137.png",
+      "image_sha256": "4bc5f3dbf2bb872cdd9474ce36359fb89576c21547b621aacc14c862ef82c322",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001137.txt",
+      "annotation_sha256": "4d007c4db8df6ec847c0c48d622fc9816d9b59d605f5c2c7de0f807d5d08719a",
+      "boxes": 1
+    },
+    {
+      "image": "train-crop001042.png",
+      "source_image": "INRIAPerson/Train/pos/crop001042.png",
+      "image_sha256": "9ee59b373aa7bd24be43c522db5194a0986717491b4c614f86ff65d48df92fdc",
+      "source_annotation": "INRIAPerson/Train/annotations/crop001042.txt",
+      "annotation_sha256": "9d6677f3b0a4b44f49e6b7421d3beb767ddfe1d52b8498c3695740a293d7b89e",
+      "boxes": 2
+    },
+    {
+      "image": "train-person_225.png",
+      "source_image": "INRIAPerson/Train/pos/person_225.png",
+      "image_sha256": "9bcf93068a3b823b923bb9c323491b0c8cb5ebbb6bdb41bc0d1fe7e3c5800c4b",
+      "source_annotation": "INRIAPerson/Train/annotations/person_225.txt",
+      "annotation_sha256": "bd6dd7439ba96ba12e74c0fc158161899ce7d498f09f6aea94dafba32e14a2e3",
+      "boxes": 3
+    },
+    {
+      "image": "test-person_099.png",
+      "source_image": "INRIAPerson/Test/pos/person_099.png",
+      "image_sha256": "3a18fd0f7b6b98dfd0c8e5d7249b59814d4296f0b559b6255b75258eb07d9590",
+      "source_annotation": "INRIAPerson/Test/annotations/person_099.txt",
+      "annotation_sha256": "305608360861725cdce9d3b99ff2b117e80c8d43204b3dff8ae4883f4d19a968",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_and_bike_102.png",
+      "source_image": "INRIAPerson/Test/pos/person_and_bike_102.png",
+      "image_sha256": "7a2b39c0be980be88b56b4677fd5243f30b9c2209c15df12ea07a6166a4c1623",
+      "source_annotation": "INRIAPerson/Test/annotations/person_and_bike_102.txt",
+      "annotation_sha256": "4bb6a0cd1f0d3647c216832a3f597fa9da79258af44bd354bfbccd655d7d5ec7",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_248.png",
+      "source_image": "INRIAPerson/Test/pos/person_248.png",
+      "image_sha256": "e083679bddc7dab2ee010240d37fcf64ce0c2a7b23cbc13b618028296066ec2b",
+      "source_annotation": "INRIAPerson/Test/annotations/person_248.txt",
+      "annotation_sha256": "8b27e71bb194c11c4884c7861b3bda1491ec683305fbba3957288982e97630da",
+      "boxes": 2
+    },
+    {
+      "image": "test-person_and_bike_038.png",
+      "source_image": "INRIAPerson/Test/pos/person_and_bike_038.png",
+      "image_sha256": "59087f8a75e21a6d3e7eff47eb5b0951b5b216590be5e975466f9e929f638179",
+      "source_annotation": "INRIAPerson/Test/annotations/person_and_bike_038.txt",
+      "annotation_sha256": "b45c98e857ca2d1ae5732713344297188065c4fa7d19883cb084e5acc18da288",
+      "boxes": 4
+    },
+    {
+      "image": "test-crop_000005.png",
+      "source_image": "INRIAPerson/Test/pos/crop_000005.png",
+      "image_sha256": "1b54fbe4c9bd3a886327e48d34485222f50e8de3259beb4a69b4ff94646d4c7f",
+      "source_annotation": "INRIAPerson/Test/annotations/crop_000005.txt",
+      "annotation_sha256": "c7f3fbc7445cf706f4fae024cfde81dda6d311fbe8035f059816d85d0d9005af",
+      "boxes": 2
+    },
+    {
+      "image": "test-crop001653.png",
+      "source_image": "INRIAPerson/Test/pos/crop001653.png",
+      "image_sha256": "ca8270ba061661a1141f81fd2821251470e535d659e0d66ebf50e6e651036166",
+      "source_annotation": "INRIAPerson/Test/annotations/crop001653.txt",
+      "annotation_sha256": "2c091f4a900c452a41c03db75842e72a7c44e26c765eb1016150c38fd10b6c5d",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_135.png",
+      "source_image": "INRIAPerson/Test/pos/person_135.png",
+      "image_sha256": "53727a22390f8e24855641d2629f2a9d90134efeb5cc062dbc710310260b0237",
+      "source_annotation": "INRIAPerson/Test/annotations/person_135.txt",
+      "annotation_sha256": "ee4c2d4cf7fcefa02a8197a27513cbbb74a2136f2f761ac63093a4ec998764da",
+      "boxes": 3
+    },
+    {
+      "image": "test-person_and_bike_054.png",
+      "source_image": "INRIAPerson/Test/pos/person_and_bike_054.png",
+      "image_sha256": "905f33be6d019964d2f3bf0ad29ee50c9960aa16c9fb04cfff0259821bf6ec83",
+      "source_annotation": "INRIAPerson/Test/annotations/person_and_bike_054.txt",
+      "annotation_sha256": "c69dcf9de1b09fe7b3eaf43f7dbffb38caf85115444c0ef03ecfb2f7ac7fc5ed",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_and_bike_048.png",
+      "source_image": "INRIAPerson/Test/pos/person_and_bike_048.png",
+      "image_sha256": "7b1d57f433f1787152345c7275ef7a8d5cdaf4b00a9df603a66f577cf5c2e52d",
+      "source_annotation": "INRIAPerson/Test/annotations/person_and_bike_048.txt",
+      "annotation_sha256": "58e773910a85dde6c1bdcc9eab60ec630357e53a55b70db2d43def47c4ec4a2e",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_317.png",
+      "source_image": "INRIAPerson/Test/pos/person_317.png",
+      "image_sha256": "0f965f031989549ef0d79c518d33a26260d3eca00e7010b601e130e962ab93cd",
+      "source_annotation": "INRIAPerson/Test/annotations/person_317.txt",
+      "annotation_sha256": "66b07c2fb98e0fe32e80a89dc0525136e8303d6fcc46156b7d74c7cec588f183",
+      "boxes": 3
+    },
+    {
+      "image": "test-person_and_bike_058.png",
+      "source_image": "INRIAPerson/Test/pos/person_and_bike_058.png",
+      "image_sha256": "a5695064ed91139d208f9fc219d5606f48d04c7b04a17bb8c860121dd30204ef",
+      "source_annotation": "INRIAPerson/Test/annotations/person_and_bike_058.txt",
+      "annotation_sha256": "d3e3ab9c9ac8c4fe80e6b61908c316ed57b1cfa53faf7942907752d1c4079a8d",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_093.png",
+      "source_image": "INRIAPerson/Test/pos/person_093.png",
+      "image_sha256": "5d8580406878e493d577870666093984f7c089eb9cbb87846777757ffe571008",
+      "source_annotation": "INRIAPerson/Test/annotations/person_093.txt",
+      "annotation_sha256": "e4cbf8177cfe236ec66471ec396de0981ec3f771212c711fa4deb4efe10452bc",
+      "boxes": 2
+    },
+    {
+      "image": "test-crop001723.png",
+      "source_image": "INRIAPerson/Test/pos/crop001723.png",
+      "image_sha256": "9d2f54f191b0312e74b839749187d3acc0dac244528b2a5013fc09c4569bb25e",
+      "source_annotation": "INRIAPerson/Test/annotations/crop001723.txt",
+      "annotation_sha256": "1711883dcd643eb8885035c5620673f3942e8b4ddccb37037cbc2c6f756e3b43",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_and_bike_104.png",
+      "source_image": "INRIAPerson/Test/pos/person_and_bike_104.png",
+      "image_sha256": "8bf6a740ab196b786e2c362a230997636c02489ce506143360481ba047f943f6",
+      "source_annotation": "INRIAPerson/Test/annotations/person_and_bike_104.txt",
+      "annotation_sha256": "0528889ae471f91344bb057ddfa3a9062751b0016bc86d454e05d296a2ecae28",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_and_bike_066.png",
+      "source_image": "INRIAPerson/Test/pos/person_and_bike_066.png",
+      "image_sha256": "68949bfbe4497dde13354628fd3fb39c53a42c00f9ccae17481ee5ba892b1d10",
+      "source_annotation": "INRIAPerson/Test/annotations/person_and_bike_066.txt",
+      "annotation_sha256": "6167054c25d8c7e326979c1be6820999ae8d26df51840e29b72312b8071e5fd9",
+      "boxes": 1
+    },
+    {
+      "image": "test-person_053.png",
+      "source_image": "INRIAPerson/Test/pos/person_053.png",
+      "image_sha256": "cb901702c22957f71540cb78cfd31bd9de9d310102b88ec55a32b2dffb14341c",
+      "source_annotation": "INRIAPerson/Test/annotations/person_053.txt",
+      "annotation_sha256": "d19ffc22434e9814c29c7e466df9d1847ec34e05d00327339b8f0851fbfb86e9",
+      "boxes": 1
+    }
+  ]
+}

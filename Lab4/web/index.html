@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab 4 Camera</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;margin:24px auto;padding:0 20px;max-width:980px;color:#152332;background:#f6f8fa}
+h1{font-size:28px;margin:0}p{margin:8px 0 16px}.muted{color:#536275}img{display:block;width:auto;height:auto;max-width:100%;max-height:55vh;background:#172029;border-radius:8px}
+button,a.download{font:inherit;display:inline-block;border:1px solid #2c465f;border-radius:5px;background:white;color:#163953;padding:9px 15px;margin:4px 6px 4px 0;cursor:pointer;text-decoration:none}
+button:disabled{opacity:.45;cursor:default}button:hover:enabled{background:#e4edf5}input{font:inherit;padding:9px;width:min(90%,600px);border:1px solid #8090a0;border-radius:4px}
+#message{min-height:26px;color:#17542d}#status{font-weight:600}table{border-collapse:collapse;margin:16px 0;width:100%;max-width:800px}th,td{text-align:left;padding:7px 12px;border-bottom:1px solid #cbd5df}th:first-child,td:first-child{padding-left:0}
+</style></head><body>
+<h1>Lab 4 Camera</h1>
+<p class="muted">__SOURCE__ · Patch source: __PATCH_SOURCE__ · Person objectness threshold: 0.40</p>
+<p id="status" role="status">Starting camera and detector…</p>
+<img id="video" alt="Live camera image with person detection boxes">
+<p>Keep one person in view. Save Clean, then hold the 40 cm Random and Learned patches at the same torso position. For Explore, change one thing.</p>
+<div id="buttons"><button disabled data-condition="Clean">Save Clean</button><button disabled data-condition="Random">Save Random</button><button disabled data-condition="Learned">Save Learned</button><button disabled data-condition="Explore">Save Explore</button></div>
+<p><label for="note">Explore change (for example, turn slightly):</label><br><input id="note" maxlength="160" placeholder="Describe the one change"></p>
+<p id="message" role="status" aria-live="polite"></p>
+<table><thead><tr><th>Condition</th><th>Person detected</th><th>Max person objectness</th></tr></thead><tbody id="rows"></tbody></table>
+<a class="download" href="/download" download="lab4-results.zip">Download results</a>
+<p class="muted">Re-saving updates the comparison and keeps earlier captures. Download includes comparison.csv, evidence.jpg and the original records.</p>
+<script>
+const token='__TOKEN__';let displayed=0,after=0,lastFrame=0,saving=false;
+const video=document.getElementById('video'),status=document.getElementById('status'),message=document.getElementById('message');
+const buttons=[...document.querySelectorAll('button[data-condition]')];
+function enable(){buttons.forEach(b=>b.disabled=saving||!displayed||Date.now()-lastFrame>10000)}
+function table(saved){const body=document.getElementById('rows');body.replaceChildren();for(const label of ['Clean','Random','Learned','Explore']){const row=document.createElement('tr');const entry=saved[label];for(const value of [label,entry?(entry.person_detected?'Yes':'No'):'—',entry?entry.max_person_score.toFixed(3):'—']){const cell=document.createElement('td');cell.textContent=value;row.appendChild(cell)}body.appendChild(row)}}
+async function frames(){while(true){try{const response=await fetch('/frame?after='+after,{cache:'no-store',signal:AbortSignal.timeout(10000)});const data=await response.json();if(!response.ok)throw Error(data.error);if(data.waiting){if(!displayed)status.textContent='Waiting for the first camera frame…';await new Promise(r=>setTimeout(r,300));continue}
+await new Promise((resolve,reject)=>{video.onload=resolve;video.onerror=reject;video.src='data:image/jpeg;base64,'+data.image});displayed=data.id;after=data.id;lastFrame=Date.now();status.textContent=`Frame ${data.id} · ${data.update_fps.toFixed(1)} updates/s · ${data.inference_ms.toFixed(0)} ms processing`;table(data.saved);enable();
+}catch(error){displayed=0;enable();status.textContent=error.message||'Connection lost. Check the Pi terminal and SSH tunnel.';await new Promise(r=>setTimeout(r,1000))}}}
+for(const button of buttons){button.addEventListener('click',async()=>{const frame=displayed;if(!frame)return;saving=true;enable();try{const response=await fetch('/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token,frame_id:frame,condition:button.dataset.condition,note:button.dataset.condition==='Explore'?document.getElementById('note').value:''})});const data=await response.json();if(!response.ok)throw Error(data.error);table(data.saved);message.textContent=`Saved ${button.dataset.condition}, frame ${data.frame_id}.`}catch(error){message.textContent=error.message}finally{saving=false;enable()}})}
+setInterval(()=>{enable();if(lastFrame&&Date.now()-lastFrame>10000)status.textContent='No fresh frame. Check the Pi terminal and SSH tunnel.'},1000);
+table({});frames();
+</script></body></html>
